@@ -1,0 +1,40 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  max-width: 850px;
+
+  &__subTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: base.$black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 30px;
+  }
+
+  &__more {
+    display: block;
+    border: none;
+    border-radius: 10px;
+    margin: 50px auto 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: base.$black;
+    background: none;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

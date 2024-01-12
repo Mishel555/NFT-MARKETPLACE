@@ -1,0 +1,17 @@
+@use '@styles/base';
+
+.root {
+  padding: 10px 0;
+  border-bottom: 1px solid base.$grey-extra-light;
+
+  width: -moz-fit-content;
+  width: fit-content;
+
+  &:last-child {
+    border: none;
+  }
+
+  &_active {
+    background-color: #F4F6FF;
+  }
+}

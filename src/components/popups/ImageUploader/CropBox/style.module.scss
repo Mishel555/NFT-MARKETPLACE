@@ -1,0 +1,9 @@
+.root {
+  &__cropper {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    right: 10px;
+    bottom: 100px;
+  }
+}

@@ -1,0 +1,11 @@
+@use '@styles/base';
+
+.root {
+  padding: 25px 20px;
+  border-radius: 10px;
+  border: 1px solid base.$grey-extra-light;
+
+  @media (max-width: base.$breakpoint-md) {
+    padding: 25px 16px;
+  }
+}

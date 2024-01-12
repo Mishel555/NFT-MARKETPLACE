@@ -1,0 +1,49 @@
+@use '@styles/base';
+@use "@styles/main";
+
+.popup_root {
+  background: rgba(81, 52, 43, 0.75);
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  .popup {
+    background-color: base.$grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    max-width: 900px;
+    width: 100%;
+    padding: 40px 70px;
+  }
+
+  .modal_title {
+    font-size: 24px;
+    font-weight: 700;
+    color: base.$white;
+    text-transform: uppercase;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: none;
+
+    img {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}

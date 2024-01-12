@@ -1,0 +1,33 @@
+@use '@styles/base.scss';
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__btn {
+    height: 40px;
+    padding: 0 24px;
+
+    border-radius: 18px;
+    border: 1px solid base.$grey-light-extra;
+
+    font-size: 12px;
+    font-weight: 700;
+    background-color: base.$white;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+
+    &_active {
+      color: base.$violet;
+      pointer-events: none;
+      border-color: base.$violet-light;
+      background-color: base.$violet-light;
+    }
+  }
+
+}

@@ -1,0 +1,66 @@
+@import '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: $popup-dark-background;
+
+  &__wrapper {
+    border-radius: 15px;
+    max-width: 780px;
+    padding: 20px 40px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+
+    background-color: $white;
+  }
+
+  &__header {
+    padding-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid $grey-extra;
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  &__block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &__close {
+    border: none;
+    background: none;
+
+    path {
+      transition: .2s ease-in-out;
+    }
+
+    &:hover {
+      path {
+        stroke: $violet;
+      }
+    }
+  }
+}

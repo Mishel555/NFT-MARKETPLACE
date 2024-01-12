@@ -1,0 +1,44 @@
+@use '../../../../styles/base';
+
+.root {
+  display: grid;
+  gap: 15px;
+
+  .seconds_block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      color: base.$white;
+    }
+
+    &__seconds {
+      font-size: 13px;
+      font-weight: 600;
+      color: base.$grey-normal-extra;
+    }
+  }
+
+  .log_block {
+    margin: 5px 0;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__device_name, &__device_status {
+      font-size: 14px;
+    }
+
+    &__device_name {
+      color: base.$grey-normal-extra;
+    }
+
+    &__device_status {
+      color: base.$green;
+    }
+  }
+}

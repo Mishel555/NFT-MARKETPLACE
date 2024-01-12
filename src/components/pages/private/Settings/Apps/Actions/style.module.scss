@@ -1,0 +1,37 @@
+@use "@styles/base.scss";
+@use "@styles/main.scss";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  &__btn {
+    font-size: 14px;
+    font-weight: 700;
+    width: 165px;
+    padding: 13px;
+    border-radius: 2px;
+    border: none;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &_light {
+      color: base.$violet;
+      background: base.$violet-light;
+    }
+
+    &_dark {
+      color: base.$white;
+      background: base.$violet;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

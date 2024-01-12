@@ -1,0 +1,51 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Inter', sans-serif;
+
+  &_md {
+    .root__label {
+      padding: 8px 15px;
+      font-size: 16px;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  &_sm {
+    .root__label {
+      padding: 8px 10px;
+      font-size: 14px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__label {
+    border-radius: 23px;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    text-decoration-line: none;
+    color: base.$green-light;
+    background: rgba(0, 169, 118, 0.15);
+
+    img {
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+  }
+}

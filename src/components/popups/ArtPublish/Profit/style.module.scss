@@ -1,0 +1,21 @@
+@use '@styles/base.scss';
+
+.root {
+  flex: 1;
+  min-width: 240px;
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid base.$grey-extra;
+  }
+
+  &__profit {
+    margin-top: 20px;
+    height: 36px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}

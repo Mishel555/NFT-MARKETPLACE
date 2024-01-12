@@ -1,0 +1,53 @@
+@use '@styles/base';
+
+.footer {
+  height: 110px;
+
+  padding: 15px 30px;
+  background-color: base.$grey-dark;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__preview_button {
+  width: 125px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: base.$white;
+  background-color: base.$violet;
+
+  transition: .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.footer__save_button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid base.$violet;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: base.$violet;
+
+  transition: .2s ease-in-out;
+  background-color: base.$grey-dark;
+
+  &:hover {
+    background-color: base.$violet;
+    color: base.$white;
+
+    transform: scale(1.1);
+  }
+}

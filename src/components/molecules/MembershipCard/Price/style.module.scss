@@ -1,0 +1,22 @@
+@use '@styles/base.scss';
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &__price {
+    display: flex;
+    align-items: center;
+
+    &_text {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    &_icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use '@styles/base';
+
+.root {
+  max-width: 470px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  flex-wrap: wrap;
+  max-height: 550px;
+  overflow-y: auto;
+  margin-top: 15px;
+  margin-bottom: 85px;
+
+  @media (max-width: base.$breakpoint-fhd) {
+    max-height: 350px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: base.$grey-ultra-normal;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: base.$grey-light;
+  }
+
+  @media screen and (max-width: base.$breakpoint-xl) {
+    gap: 15px;
+  }
+
+  @media screen and (max-width: base.$breakpoint-lg) {
+    display: block;
+  }
+}

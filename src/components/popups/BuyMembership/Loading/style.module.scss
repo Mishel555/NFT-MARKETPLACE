@@ -1,0 +1,19 @@
+@use '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: base.$popup-dark-background;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: base.$violet;
+  }
+}

@@ -1,0 +1,59 @@
+@use '@styles/base.scss';
+
+.root {
+  position: fixed;
+  inset: 0;
+  background-color: base.$popup-dark-background;
+
+  &__wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 100%;
+    height: 100%;
+    max-width: 85%;
+    max-height: 75vh;
+    border-radius: 5px;
+    padding: 30px;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    background-color: base.$white;
+
+    @media screen and (max-width: base.$breakpoint-sm) {
+      max-height: 50vh;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+
+    border: none;
+    background: none;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    max-height: calc(75vh - 60px);
+    border-radius: 5px;
+    background-color: base.$black;
+
+    object-fit: contain;
+
+    @media screen and (max-width: base.$breakpoint-sm) {
+      max-height: calc(50vh - 60px);
+    }
+  }
+}

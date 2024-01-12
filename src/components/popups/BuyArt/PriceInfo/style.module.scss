@@ -1,0 +1,63 @@
+@use '@styles/base.scss';
+
+.root {
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: base.$breakpoint-md) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 600;
+
+    @media (max-width: base.$breakpoint-md) {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__item {
+
+    @media (max-width: base.$breakpoint-md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &_icon {
+      width: 20px;
+    }
+
+    &_number {
+      font-size: 20px;
+      font-weight: 700;
+
+      @media (max-width: base.$breakpoint-md) {
+        font-size: 16px;
+      }
+    }
+
+    &_usd {
+      margin-left: 15px;
+      font-size: 16px;
+      font-weight: 700;
+      color: base.$grey;
+
+      @media (max-width: base.$breakpoint-md) {
+        font-size: 14px;
+      }
+    }
+  }
+}

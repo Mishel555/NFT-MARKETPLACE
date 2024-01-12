@@ -1,0 +1,44 @@
+@use '@styles/base';
+
+.root {
+  position: relative;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: base.$white;
+  text-transform: uppercase;
+
+  &__lg {
+    width: 74px;
+    height: 74px;
+    font-size: 30px;
+  }
+
+  &__md {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  &__sm {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__paige {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+}

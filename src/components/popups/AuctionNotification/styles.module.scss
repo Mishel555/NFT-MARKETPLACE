@@ -1,0 +1,28 @@
+@use '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: base.$popup-dark-background;
+
+  &__container {
+    max-width: 600px;
+    margin: auto;
+    padding: 24px 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+
+    border-radius: 10px;
+    transform: translateY(-50%);
+    background-color: base.$white;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+  }
+}

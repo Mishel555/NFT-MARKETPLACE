@@ -1,0 +1,43 @@
+@import '@styles/base.scss';
+
+.root {
+  width: 100%;
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  &__btn {
+    padding: 10px 40px;
+
+    border: 2px solid;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+
+    background: none;
+    transition: .2s ease-in-out;
+  }
+
+  &__submit {
+    background-color: $black;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+      border-color: $black;
+    }
+  }
+
+  &__cancel {
+    background-color: $violet;
+
+    &:hover {
+      background-color: $violet-light;
+    }
+  }
+}

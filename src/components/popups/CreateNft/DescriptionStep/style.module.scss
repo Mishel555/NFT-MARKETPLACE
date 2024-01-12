@@ -1,0 +1,16 @@
+@use "@styles/base.scss";
+
+.root {
+  position: relative;
+  padding: 15px 20px;
+
+  &__block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+}

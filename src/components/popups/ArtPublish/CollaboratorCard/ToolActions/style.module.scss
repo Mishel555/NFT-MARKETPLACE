@@ -1,0 +1,67 @@
+@use '@styles/base';
+
+.root {
+  position: relative;
+
+  &__action {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(base.$grey-extra, .6);
+
+    transition: .3s ease-in-out;
+    background-color: base.$white;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    svg {
+      path {
+        transition: .3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      border-color: base.$black;
+      background-color: base.$black;
+
+      svg {
+        path {
+          fill: base.$white;
+          stroke: base.$white;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 140px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid base.$grey-light-normal;
+
+    position: absolute;
+    right: 0;
+    top: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    list-style: none;
+    background-color: base.$white;
+  }
+
+  &__item {
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  min-height: base.$editorBody;
+  margin: auto;
+  background-color: base.$grey;
+}

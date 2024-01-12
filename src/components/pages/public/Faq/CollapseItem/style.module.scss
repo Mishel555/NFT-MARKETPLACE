@@ -1,0 +1,56 @@
+@use '@styles/base';
+
+.root {
+  margin-bottom: 20px;
+
+  &__preview {
+    background: rgba(235, 240, 240, 0.5);
+
+    border-radius: 5px;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+    transition: .2s ease-in-out;
+
+    &_active {
+      background-color: base.$violet-light;
+    }
+
+    &_text {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 15px 0 0;
+
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 19px;
+    }
+
+    &_button {
+      border: none;
+      background: none;
+      transition: .2s ease-in-out;
+
+      img {
+        transform: rotate(-90deg);
+        transition: .2s ease-in-out;
+      }
+
+      &_active {
+        img {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  &__answer {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 0 0 30px;
+  }
+}

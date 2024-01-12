@@ -1,0 +1,52 @@
+@use '@styles/base';
+
+.root {
+  &__btn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    background: none;
+  }
+
+  &__wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1500;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 85px 3rem 3rem;
+
+    background-color: base.$white;
+
+    &_item {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: left;
+      letter-spacing: 0.02em;
+      text-decoration-line: none;
+      color: base.$black;
+      transition: opacity .2s ease-in-out;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &_close {
+      width: 35px;
+      height: 35px;
+
+      border: none;
+      background: none;
+      z-index: 1500;
+
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@use "@styles/base";
+
+.admin {
+  min-height: calc(100vh - 292px);
+  background-color: base.$coffee-back;
+
+  &__block {
+    display: flex;
+    align-items: stretch;
+    padding-right: 40px;
+  }
+
+  &__main {
+    max-width: 1273px;
+    width: 100%;
+    margin-left: 45px;
+    padding: 40px 0;
+    @media (max-width: base.$breakpoint-xxl) {
+      margin-left: 15px;
+    }
+
+    &_title {
+      font-size: 24px;
+      font-weight: 700;
+      color: base.$coffee-dark;
+      text-transform: uppercase;
+      margin: 0 0 0 20px;
+      @media (max-width: base.$breakpoint-xxl) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.loading_box {
+  width: 400px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.treatment {
+  &_title {
+    color: base.$grey;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &_box {
+    display: grid;
+    align-items: center;
+  }
+
+  &_add_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    background: none;
+    border: none;
+
+    color: base.$grey;
+    font-weight: 900;
+    font-size: 13px;
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.new_form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid base.$grey;
+    padding: 10px;
+  }
+
+  button {
+    border: none;
+    background: none;
+  }
+}
+
+.error_message {
+  font-size: 14px;
+  color: base.$red;
+}
+
+.new_emotion_root {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

@@ -1,0 +1,30 @@
+@use '@styles/base';
+
+.root {
+  height: 25px;
+  display: grid;
+  gap: 5px;
+
+  .thumb_root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .thumb {
+      width: 2px;
+      height: 5px;
+
+      background-color: base.$grey-light;
+    }
+  }
+
+  .seconds_root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: base.$grey-normal-extra;
+  }
+}

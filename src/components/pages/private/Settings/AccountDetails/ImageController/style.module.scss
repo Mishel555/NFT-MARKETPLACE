@@ -1,0 +1,19 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: base.$white;
+
+    &:hover {
+      background-color: base.$violet;
+    }
+  }
+}

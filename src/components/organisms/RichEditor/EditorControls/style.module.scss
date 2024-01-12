@@ -1,0 +1,35 @@
+@use '@styles/base';
+
+.root {
+  padding-bottom: 10px;
+  border-bottom: 1px solid base.$black;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &__action {
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    color: base.$black;
+    transition: .2s ease-in-out;
+    background-color: base.$white;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+
+    &_active {
+      color: base.$white;
+      background-color: base.$violet;
+    }
+  }
+}

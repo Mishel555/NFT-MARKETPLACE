@@ -1,0 +1,49 @@
+@use '../../../../../../../../styles/base';
+
+.line_root {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.line_root__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      transition: transform .2s ease-in-out;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.line_box {
+  margin: 25px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  color: base.$white;
+  cursor: pointer;
+}
+
+.line_name {
+  width: 100px;
+}
+
+.track_box {
+  width: 100%;
+}
+
+.range_root {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

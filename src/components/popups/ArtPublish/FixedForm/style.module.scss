@@ -1,0 +1,46 @@
+@use '@styles/base.scss';
+
+.root {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 44px;
+  }
+
+  &__actions {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  &__submit, &__cancel {
+    width: 165px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 2px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+  }
+
+  &__submit {
+    color: base.$white;
+    border-color: base.$violet;
+    background-color: base.$violet;
+  }
+
+  &__cancel {
+    color: base.$violet;
+    border-color: base.$violet-light;
+    background-color: base.$violet-light;
+  }
+}

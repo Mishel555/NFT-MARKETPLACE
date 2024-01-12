@@ -1,0 +1,132 @@
+@use '@styles/base';
+
+.root {
+  width: fit-content;
+  display: flex;
+  align-items: stretch;
+
+  a {
+    text-decoration-line: none;
+    color: base.$black;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__bold {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+  }
+
+  &__imageSection {
+    width: 250px;
+
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
+
+    &_img {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__copiesSection {
+    width: 135px;
+
+    &_btn {
+      width: 95px;
+      height: 40px;
+      margin-top: 10px;
+      border: 1px solid base.$grey-ultra-extra;
+      border-radius: 18px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      transition: .2s ease-in-out;
+      background-color: rgba(235, 240, 240, .5);
+
+      svg {
+        transition: .2s ease-in-out;
+      }
+
+      &_active {
+        color: base.$violet;
+        border-color: base.$violet-light;
+        background-color: base.$violet-light;
+
+        svg {
+          &:last-child {
+            transform: rotate(90deg);
+
+            path {
+              stroke: base.$violet;
+            }
+          }
+
+          &:first-child {
+            path {
+              fill: base.$violet;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__priceSection, &__profitSection {
+    width: 200px;
+
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__dateSection, &__typeSection, &__totalSection {
+    width: 220px;
+  }
+
+  &__currencyIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  &__imageSection,
+  &__dateSection,
+  &__copiesSection,
+  &__priceSection,
+  &__profitSection,
+  &__typeSection,
+  &__totalSection {
+    padding: 0 15px;
+    border-right: 1px solid base.$grey-extra-light;
+  }
+}

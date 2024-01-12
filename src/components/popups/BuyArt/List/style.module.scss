@@ -1,0 +1,29 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 1150px;
+  padding: 25px 20px;
+  max-height: 200px;
+  overflow-y: auto;
+
+  @media (max-width: base.$breakpoint-md) {
+    width: 100%;
+    padding: 25px 10px;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: base.$grey-ultra;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: base.$grey-ultra;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      border: 2px solid base.$grey-ultra;
+      background-color: base.$grey-normal-dark;
+    }
+  }
+}

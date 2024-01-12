@@ -1,0 +1,117 @@
+@use './base.scss';
+
+.from_left_to_right {
+  animation: fromLeftToRight 3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.from_right_to_left {
+  animation: fromRightToLeft 3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.from_bottom_to_top {
+  animation: fromBottomToTop 2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.from_top_to_bottom {
+  animation: fromTopToBottom 1s 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.shapes {
+  animation: shapes 2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.born_via_height {
+  animation: bornViaHeight .2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.die_via_height {
+  animation: dieViaHeight .2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.born_via_fade {
+  animation: fadeInDown .4s both;
+}
+
+.die_via_fade {
+  animation: fadeInUp .4s both;
+}
+
+@keyframes fromLeftToRight {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes fromRightToLeft {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes fromBottomToTop {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes fromTopToBottom {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes shapes {
+  0% {
+    transform: rotate(180deg) translateY(110%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes bornViaHeight {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes dieViaHeight {
+  0% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+  }
+}

@@ -1,0 +1,32 @@
+@use '@styles/base';
+
+.root {
+  padding: 3px 15px;
+  border-radius: 18px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+  font-weight: 700;
+  color: base.$white;
+  text-transform: capitalize;
+
+  &__button {
+    cursor: pointer;
+  }
+
+  &__user, &__admin {
+    background: linear-gradient(261.7deg, #7E00E0 0%, #D1A3FF 100%);
+  }
+
+  &__gallery {
+    background: linear-gradient(261.7deg, #0CA36C 0%, #85D7C3 100%);
+  }
+
+  &__artist {
+    background: linear-gradient(261.7deg, #0038FF 0%, #A3C8FF 100%);
+  }
+}
+

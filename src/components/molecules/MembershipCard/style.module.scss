@@ -1,0 +1,9 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  max-width: 450px;
+  min-width: 320px;
+  border-radius: 18px;
+  border: 1px solid base.$grey-light-extra;
+}

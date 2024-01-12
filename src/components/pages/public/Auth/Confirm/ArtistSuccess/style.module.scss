@@ -1,0 +1,60 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+
+  .header {
+    text-align: center;
+
+    &__title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: base.$black;
+      margin-top: 0;
+      text-transform: capitalize;
+    }
+  }
+
+  .question {
+    text-align: center;
+    font-size: 14px;
+    color: base.$grey-main;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    label {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    button {
+      font-size: 18px;
+      font-weight: 700;
+      color: base.$black;
+      width: 100%;
+      border: 2px solid base.$grey-darker;
+      border-radius: 2px;
+      background: none;
+      padding: 12px;
+      margin-top: 25px;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+    }
+  }
+}

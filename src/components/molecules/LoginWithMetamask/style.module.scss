@@ -1,0 +1,33 @@
+@use '@styles/base';
+
+.root {
+
+  &__btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 23px;
+    border: 1px solid rgba(207, 219, 213, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$grey-main;
+
+    background: none;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
+}

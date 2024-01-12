@@ -1,0 +1,60 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 60px;
+  @media screen and (max-width: base.$breakpoint-lg) {
+    margin-top: 0;
+  }
+
+  &_group {
+    position: relative;
+    margin-bottom: 10px;
+
+    &__input {
+      font-size: 15px;
+      font-weight: 700;
+      width: 100%;
+      border: 1px solid rgba(207, 219, 213, 0.6);
+      border-radius: 15px;
+      color: base.$black;
+      padding: 20px 25px;
+
+      &::-webkit-input-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: base.$black;
+      }
+
+      &::-moz-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: base.$black;
+      }
+
+      &:-ms-input-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: base.$black;
+      }
+
+      &:-moz-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: base.$black;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

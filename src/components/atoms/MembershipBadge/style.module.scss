@@ -1,0 +1,31 @@
+@use '@styles/base.scss';
+
+.root {
+  display: inline-block;
+
+  padding: 2px 18px;
+  border-radius: 18px;
+
+  font-size: 12px;
+  font-weight: 700;
+  color: base.$white;
+
+  &__none {
+    color: base.$black;
+    border: 1px solid base.$black;
+  }
+
+  &__standardmembership {
+    background: #0067E0;
+    background: -moz-linear-gradient(261.7deg, #0067E0 0%, #A3D3FF 100%);
+    background: -webkit-linear-gradient(261.7deg, #0067E0 0%, #A3D3FF 100%);
+    background: linear-gradient(261.7deg, #0067E0 0%, #A3D3FF 100%);
+  }
+
+  &__platinummembership {
+    background: #FFAC2B;
+    background: -moz-linear-gradient(261.7deg, #FFF9EF 0%, #FFAC2B 48.44%, #E8E8E8 100%);
+    background: -webkit-linear-gradient(261.7deg, #FFF9EF 0%, #FFAC2B 48.44%, #E8E8E8 100%);
+    background: linear-gradient(261.7deg, #FFF9EF 0%, #FFAC2B 48.44%, #E8E8E8 100%);
+  }
+}

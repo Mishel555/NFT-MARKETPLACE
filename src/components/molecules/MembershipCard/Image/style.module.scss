@@ -1,0 +1,40 @@
+@use '@styles/base.scss';
+
+.root {
+  border-radius: 18px;
+
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .root__image {
+      transform: scale(1.1);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 450px;
+    border-radius: 18px;
+
+    object-fit: cover;
+    object-position: center;
+    transition: .2s ease-in-out;
+  }
+
+  &__paige {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+
+    width: 115px;
+    height: 36px;
+    padding-top: 5px;
+    border-radius: 30px;
+    border: 1px solid base.$black;
+
+    font-size: 20px;
+    color: base.$black;
+    text-align: center;
+  }
+}

@@ -1,0 +1,25 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  max-width: 260px;
+
+  @media (max-width: base.$breakpoint-md) {
+    max-width: unset;
+  }
+
+  &__block {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    display: none;
+    font-size: 22px;
+    font-weight: 800;
+    color: base.$black;
+
+    @media (max-width: base.$breakpoint-md) {
+      display: block;
+    }
+  }
+}

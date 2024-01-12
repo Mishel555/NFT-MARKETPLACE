@@ -1,0 +1,23 @@
+@use '@styles/base';
+
+.root {
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: base.$black;
+    border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    @media (max-width: base.$breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+}
+

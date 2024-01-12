@@ -1,0 +1,38 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  max-width: 760px;
+
+  @media (max-width: base.$breakpoint-md) {
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 51px;
+    color: base.$black;
+    text-transform: capitalize;
+
+    @media (max-width: base.$breakpoint-md) {
+      font-size: 28px;
+      line-height: unset;
+    }
+  }
+
+  &__block {
+    margin-top: 45px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    @media (max-width: base.$breakpoint-md) {
+      margin-top: 35px;
+      padding-bottom: 15px;
+      overflow-y: auto;
+    }
+  }
+}

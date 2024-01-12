@@ -1,0 +1,63 @@
+@use "../base.scss";
+
+.checkbox_group {
+  display: block;
+  margin-bottom: 15px;
+  @media (max-width: base.$breakpoint-md) {
+    flex: 1 1 50%;
+    margin-bottom: 25px;
+  }
+}
+
+.checkbox_group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.checkbox_group label {
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: base.$coffee-dark;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.checkbox_group label:before {
+  content: '';
+  -webkit-appearance: none;
+  background-color: base.$coffee-back;
+  padding: 13px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.checkbox_group input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 9px;
+  width: 6px;
+  height: 15px;
+  border: solid base.$white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox_group input:checked + label:before {
+  background-color: base.$coffee-dark;
+}

@@ -1,0 +1,50 @@
+@use '@styles/base';
+
+.root {
+  width: 140px;
+  padding: 10px 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 30px;
+  border: 1px solid base.$black;
+
+  @media (max-width: base.$breakpoint-md) {
+    width: 80px;
+    padding: 4px 8px;
+    gap: 4px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    @media (max-width: base.$breakpoint-md) {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+
+  &__circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: base.$black;
+
+    @media (max-width: base.$breakpoint-md) {
+      width: 4px;
+      height: 4px;
+    }
+  }
+
+  &__done {
+    background-color: base.$green;
+  }
+
+  &__declined {
+    background-color: base.$red;
+  }
+}

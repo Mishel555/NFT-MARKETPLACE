@@ -1,0 +1,88 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &__disabled {
+    cursor: not-allowed;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid base.$grey-extra;
+  }
+
+  &__btn {
+    width: 200px;
+
+    border-radius: 5px;
+    border: 1px solid base.$grey-extra;
+
+    margin-top: 20px;
+    padding: 6px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    background-color: base.$white;
+
+    @media (max-width: base.$breakpoint-md) {
+      width: 100%;
+    }
+
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    svg {
+      transition: .2s ease-in-out;
+    }
+
+    &_active {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__blockchain {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__wrapper {
+    list-style: none;
+  }
+
+  &__item {
+    width: 200px;
+    padding: 6px 16px;
+    border-radius: 5px;
+    border: 1px solid base.$grey-extra;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @media (max-width: base.$breakpoint-md) {
+      width: 100%;
+    }
+  }
+}

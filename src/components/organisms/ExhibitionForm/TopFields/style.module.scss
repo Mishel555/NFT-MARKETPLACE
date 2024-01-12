@@ -1,0 +1,9 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+
+  @media (max-width: base.$breakpoint-md) {
+    flex-direction: column;
+  }
+}

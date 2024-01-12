@@ -1,0 +1,125 @@
+@use '@styles/base';
+
+.root {
+  font-family: 'Manrope', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+
+  background: url("../../../../assets/images/auth-back-img.png") no-repeat center/cover;
+
+  @media screen and (max-width: base.$breakpoint-md) {
+    padding: 20px;
+    min-height: 80px;
+  }
+
+  &_user {
+    background: rgb(207, 192, 243);
+    background: -moz-linear-gradient(90deg, rgba(207, 192, 243, 1) 0%, rgba(208, 171, 249, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(207, 192, 243, 1) 0%, rgba(208, 171, 249, 1) 100%);
+    background: linear-gradient(90deg, rgba(207, 192, 243, 1) 0%, rgba(208, 171, 249, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cfc0f3", endColorstr="#d0abf9", GradientType=1);
+  }
+
+  &_gallery {
+    background: rgb(190, 217, 223);
+    background: -moz-linear-gradient(90deg, rgba(190, 217, 223, 1) 0%, rgba(170, 217, 208, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(190, 217, 223, 1) 0%, rgba(170, 217, 208, 1) 100%);
+    background: linear-gradient(90deg, rgba(190, 217, 223, 1) 0%, rgba(170, 217, 208, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bed9df", endColorstr="#aad9d0", GradientType=1);
+  }
+
+  &_artist {
+    background: rgb(193, 197, 240);
+    background: -moz-linear-gradient(90deg, rgba(193, 197, 240, 1) 0%, rgba(166, 187, 250, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(193, 197, 240, 1) 0%, rgba(166, 187, 250, 1) 100%);
+    background: linear-gradient(90deg, rgba(193, 197, 240, 1) 0%, rgba(166, 187, 250, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c1c5f0", endColorstr="#a6bbfa", GradientType=1);
+  }
+
+  &_desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 40px 40px 75px;
+    @media screen and (max-width: base.$breakpoint-md) {
+      display: none;
+    }
+  }
+
+  .mainLogo {
+    max-width: 200px;
+  }
+
+  .info {
+    max-width: 400px;
+    position: absolute;
+    bottom: 25px;
+    transform: translateY(-50%);
+
+    @media screen and (max-width: base.$breakpoint-lg) {
+      max-width: 270px;
+    }
+
+    &__title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 57px;
+      color: base.$black;
+      width: 100%;
+      margin-top: 45px;
+
+      @media screen and (max-width: base.$breakpoint-lg) {
+        font-size: 32px;
+        line-height: unset;
+      }
+    }
+
+    &__group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (max-width: base.$breakpoint-lg) {
+        flex-direction: column;
+      }
+    }
+
+    &_link {
+      &__account {
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        color: base.$black;
+        text-decoration: none;
+      }
+
+      &__auth {
+        font-family: 'Manrope', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: base.$white;
+        max-width: 290px;
+        width: 100%;
+        padding: 15px;
+        background: base.$black;
+        border: none;
+        border-radius: 2px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 8px;
+        transition: 0.4s ease-in-out;
+        @media screen and (max-width: base.$breakpoint-lg) {
+          margin-left: 0;
+          margin-top: 10px;
+          max-width: unset;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

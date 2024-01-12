@@ -1,0 +1,54 @@
+.range_root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.track_root {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 5px;
+}
+
+.track {
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.thumb_root {
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+}
+
+.mark_root {
+  position: absolute;
+}
+
+.mark {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.mark_meta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

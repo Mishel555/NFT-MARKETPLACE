@@ -1,0 +1,25 @@
+@use '@styles/base';
+
+.root {
+  &__toggle {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    background: none;
+    border: none;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__time {
+    font-size: 14px;
+    font-weight: 500;
+    color: base.$white;
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+  }
+}

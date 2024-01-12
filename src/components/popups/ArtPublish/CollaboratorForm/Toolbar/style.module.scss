@@ -1,0 +1,41 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(base.$grey-extra, 0.6);
+
+    transition: .2s ease-in-out;
+    background-color: base.$white;
+
+    &:hover {
+      background-color: rgba(base.$grey-extra, 0.6);
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+}

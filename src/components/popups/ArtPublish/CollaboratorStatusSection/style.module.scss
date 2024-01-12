@@ -1,0 +1,17 @@
+@use '@styles/base.scss';
+
+.root {
+  flex: 0.5;
+
+  @media (max-width: base.$breakpoint-md) {
+    display: none;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid base.$grey-extra;
+  }
+}

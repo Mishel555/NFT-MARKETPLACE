@@ -1,0 +1,44 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 20px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__fee {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 15px;
+  }
+
+  &__wrapper {
+    margin-top: 20px;
+  }
+
+  &__add {
+    margin-top: 25px;
+    padding: 12px 40px;
+
+    border-radius: 2px;
+    border: 1px solid base.$violet;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$white;
+
+    background-color: base.$violet;
+    transition: .3s ease-in-out;
+
+    @media (max-width: base.$breakpoint-md) {
+      padding: 12px 25px;
+    }
+
+    &:hover {
+      border-color: base.$black;
+      background-color: base.$black;
+    }
+  }
+}

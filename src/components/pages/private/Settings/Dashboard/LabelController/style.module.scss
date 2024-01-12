@@ -1,0 +1,35 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    border: none;
+    background: none;
+    transition: opacity .2s ease-in-out;
+
+    &_text {
+      font-weight: 500;
+    }
+
+    &_circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    &_hidden {
+      .root__label_text {
+        opacity: .7;
+        text-decoration-line: line-through;
+      }
+    }
+  }
+}

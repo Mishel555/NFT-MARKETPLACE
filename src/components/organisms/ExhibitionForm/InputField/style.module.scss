@@ -1,0 +1,72 @@
+@use '@styles/base';
+
+.root {
+
+  &__label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: base.$grey-main;
+  }
+
+  &__input, &__area {
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      color: base.$grey-main;
+    }
+
+    &::-moz-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      color: base.$grey-main;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      color: base.$grey-main;
+    }
+
+    &:-moz-placeholder {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      color: base.$grey-main;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    color: base.$black;
+    margin-top: 5px;
+    border: none;
+    background: none;
+  }
+
+  &__area {
+    width: 100%;
+    min-height: 200px;
+    border: none;
+    margin-top: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+
+    resize: none;
+    background: none;
+  }
+
+  &__message {
+    font-size: 12px;
+    color: base.$red;
+  }
+}

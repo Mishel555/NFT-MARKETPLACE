@@ -1,0 +1,26 @@
+@use '@styles/base';
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 370px));
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 20px;
+
+  @media screen and (max-width: base.$breakpoint-2xl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: base.$breakpoint-lg-big) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: base.$breakpoint-md) {
+    grid-template-columns: repeat(auto-fit, minmax(370px, 370px));
+    justify-content: center;
+  }
+
+  @media screen and (max-width: base.$breakpoint-sm) {
+    display: block;
+  }
+}

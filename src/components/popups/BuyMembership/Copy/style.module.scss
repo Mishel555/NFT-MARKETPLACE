@@ -1,0 +1,94 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  &__preview {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    &_wrapper {
+      display: grid;
+      align-items: stretch;
+      font-weight: 600;
+    }
+
+    &_title {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    &_img {
+      width: 100px;
+      height: 100px;
+      border-radius: 18px;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &_user {
+      width: 200px;
+      color: base.$black;
+      text-decoration: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    &_heading {
+      height: 75px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+
+      h1 {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+
+    &_content {
+      margin-top: 20px;
+    }
+  }
+
+  &__price {
+    &_wrapper {
+      margin-bottom: 10px;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &_icon {
+      width: 20px;
+    }
+
+    &_price {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    &_usd {
+      font-size: 16px;
+      font-weight: 700;
+      color: base.$grey;
+    }
+  }
+}

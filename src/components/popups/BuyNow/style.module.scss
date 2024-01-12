@@ -1,0 +1,48 @@
+@use '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+
+  background-color: base.$popup-dark-background;
+
+  &__main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 100%;
+    max-width: 780px;
+
+    border-radius: 10px;
+    background-color: base.$white;
+  }
+
+  &__header {
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__close {
+    border: none;
+    background: none;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  &__table {
+    overflow-x: auto;
+  }
+}

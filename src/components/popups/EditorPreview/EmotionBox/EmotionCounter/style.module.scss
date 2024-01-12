@@ -1,0 +1,29 @@
+@use '@styles/base';
+
+.emotion_item {
+  width: 40px;
+  border-radius: 20px;
+  padding: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  &_title {
+    font-size: 14px;
+    font-weight: 600;
+    color: base.$white;
+  }
+
+  &_close_button {
+    background: none;
+    border: none;
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

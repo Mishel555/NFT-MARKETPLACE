@@ -1,0 +1,77 @@
+@use '@styles/base';
+@use '@styles/main';
+
+.root {
+  max-width: 470px;
+  width: 100%;
+
+  &_groups {
+    margin: 25px auto 0;
+    text-align: center;
+    display: flex;
+    max-width: 470px;
+
+    button {
+      font-size: 18px;
+      font-weight: 700;
+      color: base.$black;
+      width: 100%;
+      border: 2px solid base.$grey-darker;
+      border-radius: 2px;
+      background: none;
+      padding: 12px;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:last-child {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &_title {
+    position: relative;
+    margin-top: 10px;
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      color: base.$grey-main;
+      padding-right: 15px;
+      background-color: base.$white;
+      position: relative;
+      z-index: 3;
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: base.$grey-normal;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &_subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: base.$grey-main;
+    margin-top: 15px;
+  }
+
+  &_block {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &_headers {
+    margin: 20px 0 0;
+  }
+}

@@ -1,0 +1,74 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  &__btn {
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid base.$grey-extra-light;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    transition: .2s ease-in-out;
+    background-color: base.$white;
+
+    svg {
+      path, rect {
+        transition: .2s ease-in-out;
+      }
+    }
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+
+      svg {
+        path {
+          fill: base.$white;
+          stroke: base.$white;
+        }
+        rect {
+          stroke: base.$white;
+        }
+      }
+    }
+
+    &_active {
+      color: base.$violet;
+      pointer-events: none;
+      border-color: base.$violet-light;
+      background-color: base.$violet-light;
+
+      svg {
+        path {
+          fill: base.$violet;
+          stroke: base.$violet;
+        }
+        rect {
+          stroke: base.$violet;
+        }
+      }
+    }
+
+    &_text {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    &_image {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

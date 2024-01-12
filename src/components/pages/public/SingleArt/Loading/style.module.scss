@@ -1,0 +1,12 @@
+@use '@styles/base';
+
+.root {
+  height: base.$body;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transform: scale(1.5);
+  }
+}

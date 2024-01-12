@@ -1,0 +1,44 @@
+@use '@styles/base';
+
+.header {
+  text-align: center;
+
+  &__title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: base.$black;
+    @media screen and (max-width: base.$breakpoint-lg-big) {
+      font-size: 18px;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: base.$grey-main;
+    margin-top: 15px;
+  }
+
+  &__sign_question {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: base.$grey-main;
+
+    button {
+      font-size: 13px;
+      color: base.$grey-main;
+      text-decoration: underline;
+      margin-left: 5px;
+      border: none;
+      background: none;
+      transition: opacity 0.4s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

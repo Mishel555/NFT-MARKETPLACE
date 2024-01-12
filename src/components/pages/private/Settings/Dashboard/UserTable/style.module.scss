@@ -1,0 +1,30 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  position: relative;
+  margin: 10px;
+  min-height: 500px;
+  max-height: 1000px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: base.$grey-ultra-normal;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: base.$grey-light;
+  }
+
+  &__wrapper {
+    position: absolute;
+    inset: 0;
+  }
+}

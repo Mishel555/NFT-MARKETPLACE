@@ -1,0 +1,37 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  max-width: 1070px;
+  margin: 300px auto;
+
+  &__title {
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Druk", sans-serif;
+  }
+
+  &__subTitle {
+    margin-top: 30px;
+
+    text-align: center;
+    font-size: 16px;
+    color: base.$grey;
+  }
+
+  &__wrapper {
+    margin-top: 50px;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 50px;
+
+    @media (max-width: base.$breakpoint-md) {
+      flex-wrap: wrap;
+    }
+  }
+}

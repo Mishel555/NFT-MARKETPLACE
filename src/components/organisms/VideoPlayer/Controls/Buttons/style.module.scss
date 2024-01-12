@@ -1,0 +1,26 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .btn {
+    border: none;
+    background: none;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  .right_part {
+    position: absolute;
+    right: 0;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

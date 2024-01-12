@@ -1,0 +1,30 @@
+@use '@styles/base.scss';
+
+.root {
+  width: fit-content;
+  min-width: 180px;
+
+  @media (max-width: base.$breakpoint-lg) {
+    min-width: 160px;
+  }
+
+  &__heading {
+    height: 35px;
+    border-bottom: 1px solid base.$grey-light-extra;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__paige {
+    //margin-top: 10px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+}
+

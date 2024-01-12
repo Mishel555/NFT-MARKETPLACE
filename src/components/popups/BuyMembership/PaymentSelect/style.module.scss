@@ -1,0 +1,128 @@
+@use '@styles/base.scss';
+
+.root {
+  margin: 50px 0 20px;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__wrapper {
+    margin-top: 20px;
+    list-style: none;
+
+    &__item {
+      font-size: 13px;
+      font-weight: 700;
+      color: base.$black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      input:checked,
+      input:not(:checked) {
+        position: absolute;
+        left: -9999px;
+      }
+
+      input:checked + label,
+      input:not(:checked) + label {
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        line-height: 22px;
+      }
+
+      input:checked + label:before,
+      input:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid #D8D8D8;
+        border-radius: 100%;
+        background: base.$white;
+      }
+
+      input:checked + label:after,
+      input:not(:checked) + label:after {
+        content: '';
+        width: 14px;
+        height: 14px;
+        background: base.$violet;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+
+      input:not(:checked) + label:after {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      input:checked + label:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    &__label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__total {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__price {
+    &_wrapper {
+      margin-bottom: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    &_icon {
+      width: 20px;
+    }
+
+    &_price {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    &_usd {
+      margin-left: 15px;
+      font-size: 16px;
+      font-weight: 700;
+      color: base.$grey;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@use "@styles/base";
+
+.btn {
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: base.$white;
+  border: none;
+  height: 50px;
+  background-color: base.$coffee-main;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &:hover {
+    font-style: italic;
+    background-color: base.$coffee-dark;
+  }
+
+  &__ghost {
+    background-color: transparent;
+    color: base.$coffee-main;
+    border: 1px solid base.$coffee-main;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$coffee-main;
+    }
+  }
+}

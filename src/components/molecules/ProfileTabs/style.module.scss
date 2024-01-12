@@ -1,0 +1,67 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 10px;
+    background-color: base.$grey-primary-light;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: base.$black;
+  }
+
+  &__item {
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 35px;
+    border: 1px solid transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    gap: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration-line: none;
+    color: base.$grey-main;
+    transition: 0.4s ease-in-out;
+
+    @media screen and (max-width: base.$breakpoint-lg-big) {
+      margin-right: 15px;
+      padding: 8px 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: base.$black;
+      border: 1px solid base.$black;
+    }
+
+    &_active {
+      color: base.$black;
+      border: 1px solid base.$black;
+    }
+
+    &_counter {
+      border: 1px solid black;
+      border-radius: 15px;
+      padding: 2px 5px;
+    }
+  }
+}

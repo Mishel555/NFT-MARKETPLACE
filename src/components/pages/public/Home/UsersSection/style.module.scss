@@ -1,0 +1,59 @@
+@use '@styles/base.scss';
+
+.root {
+  padding: 50px 60px;
+  max-width: 1680px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+
+  @media (max-width: base.$breakpoint-md) {
+    padding: 50px 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "Druk", sans-serif;
+
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: base.$black;
+  }
+
+  &__viewAll {
+    width: 115px;
+    padding: 10px 0;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: base.$black;
+
+    transition: .3s ease-in-out;
+    background-color: base.$white;
+
+    border-radius: 24px;
+    border: 1.5px solid base.$black;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 1680px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+}

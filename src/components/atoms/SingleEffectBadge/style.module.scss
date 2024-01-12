@@ -1,0 +1,14 @@
+@use '@styles/base';
+
+.root {
+  max-width: 120px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 15px;
+  color: base.$purple-extra;
+  background: rgba(112, 0, 151, 0.2);
+  @media (max-width: base.$breakpoint-md) {
+    font-weight: 300;
+    padding: 10px;
+  }
+}

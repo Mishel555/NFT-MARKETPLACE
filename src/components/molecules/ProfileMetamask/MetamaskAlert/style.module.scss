@@ -1,0 +1,48 @@
+@use '../../../../styles/base';
+
+.root {
+  width: 100%;
+  margin: 10px 0;
+
+  &__message {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    &__text {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 18px;
+      color: base.$black;
+      margin: 0;
+
+      a {
+        color: base.$black;
+        text-decoration: underline;
+        transition: color 0.4s ease-in-out;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    font-size: 14px;
+    font-weight: 600;
+    color: base.$grey-main;
+    text-decoration-line: underline;
+    display: block;
+    margin: 20px auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+

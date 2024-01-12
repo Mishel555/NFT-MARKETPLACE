@@ -1,0 +1,11 @@
+.effects_slider .slick-track {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.effects_slider .slick-slide {
+  width: 100%;
+  max-width: 400px;
+  margin-right: 15px;
+}

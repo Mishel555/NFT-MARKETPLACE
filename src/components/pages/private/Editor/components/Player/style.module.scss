@@ -1,0 +1,40 @@
+@use '../../../../../../styles/base';
+
+.root {
+  width: 100%;
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.video_section {
+  flex: 1;
+}
+
+.setting_section {
+  flex: .3;
+  height: 700px;
+  min-width: 410px;
+
+  overflow-y: auto;
+  background-color: base.$grey-brown;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: base.$grey-ultra;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: base.$grey-ultra;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 2px solid base.$grey-ultra;
+    background-color: base.$grey-normal-dark;
+  }
+}

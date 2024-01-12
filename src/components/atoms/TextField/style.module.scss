@@ -1,0 +1,117 @@
+@use '@styles/base';
+
+.root {
+  margin-bottom: 15px;
+  position: relative;
+
+  &_label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: base.$black;
+  }
+
+  &_input {
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$black;
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid rgba(207, 219, 213, 0.6);
+    border-radius: 23px;
+
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$grey-main;
+    }
+
+    &::-moz-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$grey-main;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$grey-main;
+    }
+
+    &:-moz-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$grey-main;
+    }
+  }
+
+  &_area {
+    width: 100%;
+    height: 100px;
+    padding: 10px 15px;
+    resize: none;
+  }
+
+  &_input, &_area {
+    font-size: 14px;
+    color: base.$black;
+    border: 1px solid rgba(207, 219, 213, 0.6);
+    border-radius: 23px;
+    margin-top: 10px;
+
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$grey-main;
+    }
+
+    &::-moz-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$grey-main;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$grey-main;
+    }
+
+    &:-moz-placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$grey-main;
+    }
+  }
+
+  &__error_message {
+    max-width: 300px;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 400;
+    color: base.$red;
+    margin: 8px 0 0;
+  }
+
+  &_error {
+    .root_input, .root_area {
+      background-color: base.$white;
+      border: 1px solid rgba(201, 3, 5, 0.6);
+    }
+  }
+
+  &_group {
+    position: relative;
+  }
+
+  &_icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 5%;
+    top: calc(50% - 5px);
+    cursor: pointer;
+  }
+}
+

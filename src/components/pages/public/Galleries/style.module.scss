@@ -1,0 +1,13 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  max-width: 1684px;
+  padding: 20px 60px 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: base.$breakpoint-md) {
+    padding: 0 15px 35px;
+  }
+}

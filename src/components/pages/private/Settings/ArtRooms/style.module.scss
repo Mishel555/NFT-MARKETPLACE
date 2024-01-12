@@ -1,0 +1,15 @@
+@use "@styles/base";
+@use "@styles/main";
+
+.root {
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 800;
+    color: base.$black;
+    margin-top: 38px;
+  }
+
+  &__block {
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,39 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__btn {
+    height: 40px;
+    padding: 0 33px;
+    border-radius: 18px;
+    border: 1px solid base.$grey-extra;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    background-color: base.$white;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__active {
+    color: base.$violet;
+    border-color: base.$violet-light;
+    background-color: base.$violet-light;
+    pointer-events: none;
+  }
+}

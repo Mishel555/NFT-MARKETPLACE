@@ -1,0 +1,57 @@
+@use '@styles/base.scss';
+
+.root {
+  display: inline-block;
+
+  @media (max-width: base.$breakpoint-md) {
+    flex-shrink: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__status {
+    height: 16px;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: base.$black;
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__number {
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$black;
+    margin-left: 10px;
+
+    transition: color .2s ease-in-out;
+  }
+
+  &__link {
+    text-decoration-line: none;
+
+    &:hover {
+      .root__number {
+        color: base.$grey-main;
+      }
+    }
+  }
+}
+
+
+

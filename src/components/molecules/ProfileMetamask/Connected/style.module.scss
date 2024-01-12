@@ -1,0 +1,107 @@
+@use '@styles/base';
+@use '@styles/main';
+
+.root {
+  &__form {
+    &_block {
+      background: #F5F7F7;
+      margin-top: 10px;
+      padding: 20px;
+      border-radius: 16px;
+      @media (max-width: base.$breakpoint-md) {
+        padding: 10px;
+      }
+
+      &_inner {
+        &_processing {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &_metamask {
+      width: 100%;
+      @media (max-width: base.$breakpoint-md) {
+        display: flex;
+        align-items: center;
+      }
+
+      &_block {
+        display: flex;
+        align-items: center;
+        color: base.$grey-main;
+        width: 100%;
+        background: none;
+      }
+
+      &_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border: 1px solid base.$violet-light;
+        border-radius: 50%;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &_info {
+        margin-left: 20px;
+        @media (max-width: base.$breakpoint-md) {
+          margin-left: 10px;
+        }
+      }
+
+      &_account {
+        font-size: 13px;
+        font-weight: 600;
+        color: base.$grey-main;
+        margin: 0;
+      }
+
+      &_total {
+        font-size: 12px;
+        font-weight: 500;
+        color: base.$grey-main;
+        margin: 10px 0 0;
+
+        span {
+          font-weight: 700;
+          margin-left: 5px;
+          text-transform: uppercase;
+        }
+      }
+
+      &_status {
+        font-size: 14px;
+        font-weight: 600;
+        color: base.$green;
+        margin: 0 0 0 auto;
+      }
+
+      &_btn {
+        font-size: 14px;
+        font-weight: 700;
+        color: base.$black;
+        background: transparent;
+        border: 1px solid base.$violet-light;
+        border-radius: 2px;
+        padding: 13px;
+        width: 100%;
+        margin-top: 20px;
+        transition: 0.4s ease-in-out;
+        @media (max-width: base.$breakpoint-md) {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

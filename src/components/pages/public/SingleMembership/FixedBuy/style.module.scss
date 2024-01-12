@@ -1,0 +1,111 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  max-width: 760px;
+
+  @media (max-width: base.$breakpoint-md) {
+    margin-bottom: 35px;
+  }
+
+  &__label {
+    font-weight: 700;
+    font-size: 16px;
+    color: base.$grey-main;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: base.$white;
+    position: absolute;
+    left: 15px;
+    top: -12px;
+  }
+
+  &__price {
+    margin-right: 15px;
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: base.$black;
+
+    font-size: 50px;
+    font-weight: 700;
+
+    @media (max-width: base.$breakpoint-lg) {
+      font-size: 30px;
+    }
+
+    img {
+      width: 33px;
+      height: 33px;
+      object-fit: cover;
+      margin-right: 8px;
+
+      @media (max-width: base.$breakpoint-md) {
+        width: 20px;
+        height: 34px;
+        margin-top: 3px;
+        margin-right: 18px;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 316px;
+    min-width: 100px;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    padding: 18px;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: base.$white;
+    text-transform: capitalize;
+
+    background: base.$black;
+    transition: 0.4s ease-in-out;
+
+    @media (max-width: base.$breakpoint-lg-big) {
+      margin-left: unset;
+      margin-top: 10px;
+    }
+
+    @media (max-width: base.$breakpoint-md) {
+      font-size: 15px;
+      max-width: 200px;
+      margin-left: auto;
+    }
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      margin-left: unset;
+      max-width: unset;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    padding: 45px 25px;
+
+    border-radius: 20px;
+    border: 1px solid base.$grey-extra-light;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: base.$breakpoint-md) {
+      padding: 30px 20px;
+    }
+  }
+}

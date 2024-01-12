@@ -1,0 +1,37 @@
+@use "@styles/base.scss";
+
+.root {
+  width: 100%;
+  padding: 5px 10px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  background-color: base.$yellow-orange;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: base.$white;
+  }
+
+  &__close {
+    width: 18px;
+    height: 18px;
+
+    border: none;
+    background: none;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

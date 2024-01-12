@@ -1,0 +1,53 @@
+@use '@styles/base';
+@use '@styles/main';
+
+.root {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 45px;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 13px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    @media (max-width: base.$breakpoint-sm) {
+      justify-content: space-between;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__status {
+    font-size: 13px;
+    font-weight: 600;
+    color: base.$green;
+
+    @media (max-width: base.$breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  &__address {
+    font-size: 13px;
+    font-weight: 600;
+    color: base.$grey-main;
+  }
+
+  &__balance {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: base.$grey-main;
+  }
+}

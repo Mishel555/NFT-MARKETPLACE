@@ -1,0 +1,28 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 40px;
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    border-bottom: 1px solid base.$grey-extra-light;
+  }
+
+  &__wrapper {
+    flex: 1;
+    padding: 8px;
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    border-radius: 8px;
+    border: 1px solid base.$grey-extra-light;
+  }
+
+  &__value {
+
+  }
+}

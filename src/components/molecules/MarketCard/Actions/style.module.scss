@@ -1,0 +1,55 @@
+@use '@styles/base';
+
+.root {
+  position: relative;
+
+  &__button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(207, 219, 213, 0.6);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    min-width: 120px;
+
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 1500;
+
+    padding: 5px 10px;
+    list-style: none;
+
+    border-radius: 5px;
+    border: 1px solid base.$grey-extra-light;
+
+    background-color: base.$white;
+  }
+
+  &__action {
+    margin: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

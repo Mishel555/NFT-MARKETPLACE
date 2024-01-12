@@ -1,0 +1,42 @@
+@use '@styles/base.scss';
+
+.root {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 20px;
+
+  border-radius: 8px;
+  border: 1px solid base.$grey-extra-light;
+  transition: .2s ease-in-out;
+
+  &__date {
+    font-size: 12px;
+    font-weight: 500;
+    color: base.$grey;
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__active {
+    cursor: pointer;
+    border-color: base.$violet-light;
+    background-color: base.$violet-light;
+  }
+
+  &__status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: base.$violet;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    transform: translateY(-50%);
+  }
+}

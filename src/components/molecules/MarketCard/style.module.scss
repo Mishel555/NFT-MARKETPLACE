@@ -1,0 +1,43 @@
+@use '@styles/base.scss';
+
+.root {
+  max-width: 350px;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+  border-radius: 4px;
+  background-color: base.$white;
+
+  &_carousel {
+    max-width: 700px;
+  }
+
+  &__creator {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px;
+    background-color: base.$white;
+
+    &__info {
+      display: flex;
+      align-items: center;
+    }
+
+    &__avatar {
+      width: 34px;
+      height: 34px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    &__name {
+      font-size: 17px;
+      font-weight: 400;
+      color: base.$black;
+      margin-left: 10px;
+      text-decoration-line: none;
+    }
+  }
+}

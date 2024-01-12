@@ -1,0 +1,20 @@
+@use '@styles/base.scss';
+
+.emotion_item {
+  width: 40px;
+  height: 25px;
+  border-radius: 20px;
+  padding: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: base.$violet;
+
+  &_title {
+    font-size: 14px;
+    font-weight: 600;
+    color: base.$white;
+  }
+}

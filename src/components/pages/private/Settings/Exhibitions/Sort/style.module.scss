@@ -1,0 +1,66 @@
+@use '@styles/base';
+
+.root {
+  position: relative;
+  z-index: 10;
+  width: 130px;
+  margin-left: 20px;
+  flex-shrink: 0;
+  background-color: base.$white;
+
+  &__btn {
+    font-size: 13px;
+    font-weight: 700;
+    color: base.$black;
+    border: 1px solid rgba(207, 219, 213, 0.6);
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: base.$white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    right: 0;
+    border: 1px solid rgba(207, 219, 213, 0.6);
+    border-radius: 20px;
+    padding: 10px;
+    list-style: none;
+    background-color: base.$white;
+
+    &_item {
+      font-size: 13px;
+      font-weight: 700;
+      color: base.$black;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &_active {
+      cursor: default;
+      color: base.$grey-light;
+      pointer-events: none;
+    }
+  }
+}

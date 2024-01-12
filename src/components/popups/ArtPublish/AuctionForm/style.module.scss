@@ -1,0 +1,12 @@
+@use '@styles/base';
+
+.root {
+  &__wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 44px;
+  }
+}

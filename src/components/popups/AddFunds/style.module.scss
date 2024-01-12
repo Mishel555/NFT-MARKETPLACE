@@ -1,0 +1,42 @@
+@use '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: base.$popup-dark-background;
+
+  &__container {
+    max-width: 530px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 24px 20px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+
+    transform: translateY(-30%);
+    background-color: base.$white;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 800;
+      text-align: center;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+
+    border: none;
+    background: none;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use '@styles/base';
+
+.root {
+  display: none;
+  border: 1px solid base.$grey-extra-light;
+  border-radius: 10px;
+
+  color: base.$black;
+  text-decoration-line: none;
+
+  @media (max-width: base.$breakpoint-md) {
+    display: block;
+  }
+}

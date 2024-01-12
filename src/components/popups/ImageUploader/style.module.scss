@@ -1,0 +1,42 @@
+@use '@styles/base';
+
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  background-color: base.$popup-dark-background;
+
+  &__wrapper {
+    position: absolute;
+    inset: 0;
+    margin: 50px 100px;
+    padding: 20px 10px 75px;
+    border-radius: 12px;
+    background-color: base.$white;
+
+    @media (max-width: base.$breakpoint-md) {
+      margin: 25px;
+    }
+  }
+
+  &__content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 15px 10px;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      border: 2px solid base.$violet;
+      background-color: base.$violet;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use '@styles/base.scss';
+
+.banner {
+  max-width: 1680px;
+  margin-bottom: 100px;
+  padding: 50px 60px;
+
+  @media (max-width: base.$breakpoint-md) {
+    padding: 50px 20px;
+  }
+}

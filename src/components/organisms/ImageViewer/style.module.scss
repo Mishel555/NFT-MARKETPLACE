@@ -1,0 +1,42 @@
+@use '@styles/base.scss';
+
+.root {
+  position: relative;
+  width: 100%;
+  margin: 50px 0;
+  padding: 15px;
+  border-radius: 18px;
+
+  text-align: center;
+  background-color: base.$black;
+
+  &__img {
+    width: 50%;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: 18px;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: none;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

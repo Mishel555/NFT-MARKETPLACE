@@ -1,0 +1,19 @@
+@use '../../../../../styles/base';
+
+.root {
+  border-bottom: 2px solid base.$grey-ultra-light;
+
+  &__switch {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: base.$grey;
+
+    &:first-child {
+      border-bottom: 2px solid base.$grey-ultra-light;
+    }
+  }
+}

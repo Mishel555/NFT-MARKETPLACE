@@ -1,0 +1,58 @@
+@use '@styles/base';
+
+.root {
+  padding: 10px 0;
+  border-bottom: 1px solid base.$grey-extra-light;
+
+  display: flex;
+  align-items: stretch;
+
+  a {
+    text-decoration-line: none;
+    color: base.$black;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__bold {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__item {
+    &_sm, &_md, &_lg, &_xl {
+      padding: 0 20px;
+      border-right: 1px solid base.$grey-extra-light;
+    }
+
+    &_sm {
+      width: 100px;
+    }
+
+    &_md {
+      width: 140px;
+    }
+
+    &_lg {
+      width: 185px;
+    }
+
+    &_xl {
+      width: 220px;
+    }
+  }
+}

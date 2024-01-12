@@ -1,0 +1,43 @@
+@use '@styles/base.scss';
+
+.root {
+  border: 1px solid rgba(207, 219, 213, 0.6);
+  border-radius: 15px;
+  padding: 20px 25px;
+  margin-bottom: 10px;
+  background-color: base.$white;
+
+  &__preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 700;
+    color: base.$black;
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  &__toggle {
+    background: none;
+    border: none;
+    transition: opacity .2s ease-in-out;
+
+    svg {
+      transition: transform .2s ease-in-out;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &_active {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

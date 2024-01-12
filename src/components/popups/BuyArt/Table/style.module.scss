@@ -1,0 +1,9 @@
+@use '@styles/base.scss';
+
+.root {
+  overflow-x: auto;
+
+  @media (max-width: base.$breakpoint-md) {
+    overflow-x: hidden;
+  }
+}

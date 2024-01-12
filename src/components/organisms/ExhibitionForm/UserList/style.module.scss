@@ -1,0 +1,85 @@
+@use '@styles/base';
+
+.root {
+  position: relative;
+  z-index: 1500;
+
+  width: 300px;
+  max-height: 200px;
+  border: 1px solid base.$grey-extra-light;
+  border-radius: 10px;
+  padding: 10px;
+
+  overflow-y: auto;
+  background-color: base.$white;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: base.$grey-ultra;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: base.$grey-ultra;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid base.$grey-ultra;
+    background-color: base.$grey-normal-dark;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 15px;
+
+    padding: 10px;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &_name {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    &_image {
+      width: 30px;
+      height: 30px;
+
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__close {
+    width: 90px;
+    height: 35px;
+    margin-top: 20px;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: base.$black;
+
+    border: 1px solid base.$black;
+    border-radius: 5px;
+    background-color: base.$white;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+  }
+}

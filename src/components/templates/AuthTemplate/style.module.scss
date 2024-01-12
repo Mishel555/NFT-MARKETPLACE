@@ -1,0 +1,16 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+
+  @media screen and (max-width: base.$breakpoint-md) {
+    position: static;
+    min-height: unset;
+    flex-direction: column;
+  }
+}

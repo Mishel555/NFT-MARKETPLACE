@@ -1,0 +1,63 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__image {
+    margin-top: 15px;
+    width: 130px;
+    height: 72px;
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    &_input {
+      flex: 3;
+      height: 50px;
+      padding: 10px 15px;
+      border-radius: 18px;
+      border: 1px solid base.$grey-extra-light;
+
+      font-size: 16px;
+      font-weight: 500;
+
+      background: rgba(235, 240, 240, 0.5);
+    }
+
+    &_btn {
+      flex: 1;
+      height: 50px;
+      border-radius: 18px;
+      border: 1px solid base.$grey-extra-light;
+
+      font-size: 16px;
+      font-weight: 600;
+
+      transition: .2s ease-in-out;
+      background-color: base.$white;
+
+      &:hover {
+        color: base.$white;
+        background-color: base.$black;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

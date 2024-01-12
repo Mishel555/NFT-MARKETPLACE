@@ -1,0 +1,19 @@
+@use '@styles/base.scss';
+
+.root {
+  padding: 40px;
+  background-color: base.$black;
+
+  @media (max-width: base.$breakpoint-lg) {
+    padding: 30px 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: base.$breakpoint-lg) {
+      flex-direction: column-reverse;
+    }
+  }
+}

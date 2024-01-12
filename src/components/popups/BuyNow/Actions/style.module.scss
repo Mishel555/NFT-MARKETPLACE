@@ -1,0 +1,42 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+
+  &_btn {
+    height: 60px;
+    border: 1px solid base.$black;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    background: none;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      color: base.$black;
+      background-color: #EBF0F0;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &_confirm {
+    width: 250px;
+    color: base.$white;
+    background-color: base.$black;
+  }
+
+  &_cancel {
+    width: 150px;
+    color: base.$black;
+  }
+}

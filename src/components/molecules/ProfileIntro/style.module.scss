@@ -1,0 +1,68 @@
+@use '@styles/base.scss';
+
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @media screen and (max-width: base.$breakpoint-md) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__cover {
+    img {
+      width: 100%;
+      height: 392px;
+      object-fit: cover;
+      border-radius: 16px;
+
+      @media screen and (max-width: base.$breakpoint-md) {
+        height: 235px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: -54px;
+  }
+
+  &__actions {
+    display: none;
+
+    @media screen and (max-width: base.$breakpoint-md) {
+      display: block;
+    }
+  }
+
+  &__profile {
+    width: 108px;
+    height: 108px;
+
+    @media screen and (max-width: base.$breakpoint-md) {
+      width: 92px;
+      height: 92px;
+      left: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid base.$white;
+    }
+  }
+}
+

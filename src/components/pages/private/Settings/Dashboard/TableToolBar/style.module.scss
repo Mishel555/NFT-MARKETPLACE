@@ -1,0 +1,58 @@
+@use '@styles/base';
+
+.root {
+  padding: 20px 24px;
+  border-bottom: 1px solid base.$grey-extra-light;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    @media (max-width: base.$breakpoint-md) {
+      width: 100%;
+      padding-top: 20px;
+      border-top: 1px solid base.$grey-extra-light;
+
+      justify-content: flex-start;
+    }
+  }
+
+  &__export {
+    width: 146px;
+    height: 36px;
+    border: 1px solid base.$grey-extra-light;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    background-color: base.$white;
+    transition: .2s ease-in-out;
+
+    path {
+      transition: .2s ease-in-out;
+    }
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+
+      path {
+        fill: base.$white;
+      }
+    }
+  }
+}

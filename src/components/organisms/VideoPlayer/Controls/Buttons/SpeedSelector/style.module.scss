@@ -1,0 +1,59 @@
+@use '@styles/base';
+
+.root {
+  position: relative;
+  width: 100px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  .selector_box {
+    height: 30px;
+    padding: 5px 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    color: base.$grey-normal-extra;
+    background-color: base.$grey;
+    cursor: pointer;
+
+    .open_btn {
+      background: none;
+      border: none;
+      transition: opacity .2s ease-in-out;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  .drop_menu {
+    position: absolute;
+    width: 100px;
+    margin-top: 5px;
+    z-index: 1500;
+
+    background-color: base.$grey-normal;
+    border: 1px solid base.$white;
+
+    ul {
+      padding: 0 15px;
+      list-style-type: none;
+
+      li {
+        color: base.$white;
+        transition: color .2s ease-in-out;
+        cursor: pointer;
+        margin: 10px 0;
+
+        &:hover {
+          color: base.$grey-light;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4136 @@
+{
+	"info": {
+		"_postman_id": "73ddc198-9a64-493c-9b9d-59a7e9758edc",
+		"name": "Editor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12329009"
+	},
+	"item": [
+		{
+			"name": "arts",
+			"item": [
+				{
+					"name": "auction",
+					"item": [
+						{
+							"name": "publish auction",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"connection": true,
+									"accept-encoding": true,
+									"accept": true,
+									"user-agent": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"auction\": {\n        \"endsAt\": \"2022-12-31\",\n        \"prices\": {\n            \"start\": 100,\n            \"buyNow\": 200,\n            \"minimum\": 160\n        },\n        \"bidGap\": 30\n    },\n    \"blockchain\": \"ethereum\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{editor_url}}/api/art/63911621a97b1a82ffb466d0/publish",
+									"host": [
+										"{{editor_url}}"
+									],
+									"path": [
+										"api",
+										"art",
+										"63911621a97b1a82ffb466d0",
+										"publish"
+									]
+								},
+								"description": "Set della configurazione dei device all'interno della stanza."
+							},
+							"response": []
+						},
+						{
+							"name": "bid",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"connection": true,
+									"accept-encoding": true,
+									"accept": true,
+									"user-agent": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"price\": 100\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{editor_url}}/api/art/6356ba512083a502dee7d2d2/bid",
+									"host": [
+										"{{editor_url}}"
+									],
+									"path": [
+										"api",
+										"art",
+										"6356ba512083a502dee7d2d2",
+										"bid"
+									]
+								},
+								"description": "Set della configurazione dei device all'interno della stanza."
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"connection": true,
+									"accept-encoding": true,
+									"accept": true,
+									"user-agent": true
+								}
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"price\": 100\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{editor_url}}/api/art/63b7edfa5494c9633f8d6949/auction",
+									"host": [
+										"{{editor_url}}"
+									],
+									"path": [
+										"api",
+										"art",
+										"63b7edfa5494c9633f8d6949",
+										"auction"
+									]
+								},
+								"description": "Set della configurazione dei device all'interno della stanza."
+							},
+							"response": []
+						},
+						{
+							"name": "reserve",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"connection": true,
+									"accept-encoding": true,
+									"accept": true,
+									"user-agent": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{editor_url}}/api/art/6356ba512083a502dee7d2d2/reserve",
+									"host": [
+										"{{editor_url}}"
+									],
+									"path": [
+										"api",
+										"art",
+										"6356ba512083a502dee7d2d2",
+										"reserve"
+									]
+								},
+								"description": "Set della configurazione dei device all'interno della stanza."
+							},
+							"response": []
+						},
+						{
+							"name": "buy now",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"connection": true,
+									"accept-encoding": true,
+									"accept": true,
+									"user-agent": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{editor_url}}/api/art/6356ba512083a502dee7d2d2/buyNow",
+									"host": [
+										"{{editor_url}}"
+									],
+									"path": [
+										"api",
+										"art",
+										"6356ba512083a502dee7d2d2",
+										"buyNow"
+									]
+								},
+								"description": "Set della configurazione dei device all'interno della stanza."
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/arts",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"arts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "perPage",
+									"value": "9",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "-updatedAt",
+									"disabled": true
+								},
+								{
+									"key": "priceFrom",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "priceTo",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "624375710543b2ae61f45f2e",
+									"disabled": true
+								},
+								{
+									"key": "emotions",
+									"value": "6250d4a3908526ff420ac652",
+									"disabled": true
+								},
+								{
+									"key": "artists",
+									"value": "62a5fc93ef60bc798fbe423b",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "Cool",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "62d6f456f7bb1b5a5c4d5bcc",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "published",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list sent for approval",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/arts?status=sent for approval",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"arts"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "sent for approval"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list approved",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/arts?status=approved",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"arts"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "approved"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get filters",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/arts/filters",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"arts",
+								"filters"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/63ab44518348cd9f9c4697a0",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63ab44518348cd9f9c4697a0"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "download",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/62c9f3260b493ea4c68d930b/download",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"62c9f3260b493ea4c68d930b",
+								"download"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "url (signed)",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/6356ba512083a502dee7d2d2/url",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"6356ba512083a502dee7d2d2",
+								"url"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "liked",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/62aa61f7e7e26a1fdc447158/liked",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"62aa61f7e7e26a1fdc447158",
+								"liked"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "opensea get nft",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/62aa61f7e7e26a1fdc447158/liked",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"62aa61f7e7e26a1fdc447158",
+								"liked"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "like",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/62aa61f7e7e26a1fdc447158/like",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"62aa61f7e7e26a1fdc447158",
+								"like"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "own",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"copyIds\": [\"18f3b07e-bf96-48eb-9858-8b8ea12c1f51\", \"e48b9a9f-d93f-462b-9660-b9e72a02d65e\"],\n    \"contractTX\": \"test\",\n    \"bypass\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/63ab44518348cd9f9c4697a0/own",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63ab44518348cd9f9c4697a0",
+								"own"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "buy",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"copyIds\": [\"2ca9bdb9-e698-4cab-8690-2763b118b8aa\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/63cfa79821f2ce3d691bc65d/buy",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63cfa79821f2ce3d691bc65d",
+								"buy"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "submit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test image art\",\n    \"description\": \"Super cool art\",\n    \"type\": \"624375710543b2ae61f45f2e\",\n    \"emotions\": [\n        \"6250d4a3908526ff420ac64e\",\n        \"6250d4a3908526ff420ac650\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/63ab44518348cd9f9c4697a0",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63ab44518348cd9f9c4697a0"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test video\",\n    \"description\": \"Super cool video\",\n    \"actuations\": [\n        {\n            \"time\": 3,\n            \"devices\": [\n                {\n                    \"id\": 1,\n                    \"state\": \"on\"\n                },\n                {\n                    \"id\": 2,\n                    \"state\": \"on\"\n                }\n            ]\n        },\n        {\n            \"time\": 6,\n            \"devices\": [\n                {\n                    \"id\": 1,\n                    \"state\": \"off\"\n                },\n                {\n                    \"id\": 2,\n                    \"state\": \"off\"\n                }\n            ]\n        },\n        {\n            \"time\": 9,\n            \"devices\": [\n                {\n                    \"id\": 1,\n                    \"state\": \"on\"\n                },\n                {\n                    \"id\": 2,\n                    \"state\": \"on\"\n                }\n            ]\n        },\n        {\n            \"time\": 12,\n            \"devices\": [\n                {\n                    \"id\": 1,\n                    \"state\": \"off\"\n                },\n                {\n                    \"id\": 2,\n                    \"state\": \"off\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/6245b59397cc4a1c252bec29",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"6245b59397cc4a1c252bec29"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "send for approval",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/63262a7c952578037f9acd54/send",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63262a7c952578037f9acd54",
+								"send"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "approve by admin",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/63262a7c952578037f9acd54/approve",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63262a7c952578037f9acd54",
+								"approve"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "reject by admin",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"reason\": \"too lame\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/62aa61f7e7e26a1fdc447158/reject",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"62aa61f7e7e26a1fdc447158",
+								"reject"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "minted",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nftId\": \"1014\",\n    \"copyIds\": [\"d269fa3c-a756-4525-aa5d-b73abeff8f1e\"],\n    \"quantity\": 1,\n    \"blockchain\": \"polygon\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/63ad51ad2235c69b7c9bdeca/minted",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63ad51ad2235c69b7c9bdeca",
+								"minted"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "publish usual sell",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 10,\n    \"price\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/63ab44518348cd9f9c4697a0/publish",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63ab44518348cd9f9c4697a0",
+								"publish"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "publish auction",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"copyIds\": [\"18f3b07e-bf96-48eb-9858-8b8ea12c1f51\", \"e48b9a9f-d93f-462b-9660-b9e72a02d65e\"],\n    \"price\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/63ab44518348cd9f9c4697a0/publish",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63ab44518348cd9f9c4697a0",
+								"publish"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "resell",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"copyId\": \"123\",\n    \"price\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/631dd6ed1bcaac8550694bbe/resell",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"631dd6ed1bcaac8550694bbe",
+								"resell"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "fork",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nftId\": \"895c91f2-0d6d-4484-a58c-e70028cd96c3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/6356ba512083a502dee7d2d2/fork",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"6356ba512083a502dee7d2d2",
+								"fork"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "upload image",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/denysaw/Downloads/6243af7ccb41f9baa23d2eecd.jpeg"
+								},
+								{
+									"key": "art",
+									"value": "6250e7082d0f100408d272b4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/upload/image",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"upload",
+								"image"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "upload video",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/denysaw/Downloads/file_example_MP4_1920_18MG.mp4"
+								},
+								{
+									"key": "art",
+									"value": "625c4a60d8d3f90d2f91cbdf",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/art/upload/video",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"upload",
+								"video"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/art/63b54dc2f7217a15cedcd12d",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"art",
+								"63b54dc2f7217a15cedcd12d"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register basic user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {\r\n        \"first\": \"Test\",\r\n        \"last\": \"Tester\"\r\n    },\r\n    \"login\": \"test5\",\r\n    \"email\": \"denysaw+test@gmail.com\",\r\n    \"password\": \"System12#\",\r\n    \"confirm\": \"System12#\",\r\n    \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/register",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "register a gallery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"header\": \"Test Gallery\",\r\n    \"description\": \"Test Gallery description\",\r\n    \"taxOffice\": \"Mars\",\r\n    \"website\": \"https://artinspace.art/\",\r\n    \"email\": \"testgallery@ya.ru\",\r\n    \"password\": \"Password1*\",\r\n    \"confirm\": \"Password1*\",\r\n    \"role\": \"gallery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/register",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "register an artist",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {\r\n        \"first\": \"Artist\",\r\n        \"last\": \"Artister\"\r\n    },\r\n    \"login\": \"artist\",\r\n    \"email\": \"artist@artist.com\",\r\n    \"password\": \"Password1*\",\r\n    \"confirm\": \"Password1*\",\r\n    \"website\": \"https://google.com\",\r\n    \"links\": [\r\n        \"https://testlink.com/\"\r\n    ],\r\n    \"role\": \"artist\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/register",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bitopa7698@teasya.com\",\r\n    \"password\": \"Password1*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/login",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get nonce",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wallet\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/nonce",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"nonce"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "login as admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"support@hcomm.eu\",\r\n    \"password\": \"Password1*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/login",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "login as default gallery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"artinspace@hcomm.eu\",\r\n    \"password\": \"Password1*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/login",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "login as an artist",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bitopa7698@teasya.com\",\r\n    \"password\": \"Password1*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/login",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "forgot",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"denysaw@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/forgot",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"forgot"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "reset",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"asdfasdf\",\r\n    \"confirm\": \"asdfasdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/auth/reset/5867c08e405bf74247cf559ed2bdb142e15b20772236bd3e16f88a58cf7b491d",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"reset",
+								"5867c08e405bf74247cf559ed2bdb142e15b20772236bd3e16f88a58cf7b491d"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "verify",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/auth/verify/c1345f810c30e1c26beeab22f53b40e7e659a78d059ae8116044e8ad752ded4a?email=new_email@gmail.com",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"verify",
+								"c1345f810c30e1c26beeab22f53b40e7e659a78d059ae8116044e8ad752ded4a"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "new_email@gmail.com"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "banners",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/banners",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"banners"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/banner/630d2cb14b85e56840aee9f9",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"banner",
+								"630d2cb14b85e56840aee9f9"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Test Banner",
+									"type": "text"
+								},
+								{
+									"key": "titleColor",
+									"value": "0xFFFFFF",
+									"type": "text"
+								},
+								{
+									"key": "descr",
+									"value": "Test Description",
+									"type": "text"
+								},
+								{
+									"key": "descrColor",
+									"value": "0xFFFFFF",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "https://google.com/",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/banner",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"banner"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Test Banner 2",
+									"type": "text"
+								},
+								{
+									"key": "titleColor",
+									"value": "0xFFFFFF",
+									"type": "text"
+								},
+								{
+									"key": "descr",
+									"value": "Test Description",
+									"type": "text"
+								},
+								{
+									"key": "descrColor",
+									"value": "0xFFFFFF",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "https://google.com/",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/banner/630d2cb14b85e56840aee9f9",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"banner",
+								"630d2cb14b85e56840aee9f9"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test category 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/banner/630d2c26ce9f6d677cb0b40e",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"banner",
+								"630d2c26ce9f6d677cb0b40e"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "devices",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/devices",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"devices"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list effects",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/effects",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"effects"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "emotions",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/emotions",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"emotions"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/emotion/62488c4b92abde538109904d",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"emotion",
+								"62488c4b92abde538109904d"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test category\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/emotion",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"emotion"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test category 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/emotion/62488c4b92abde538109904d",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"emotion",
+								"62488c4b92abde538109904d"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test category 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/emotion/6250d4a3908526ff420ac678",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"emotion",
+								"6250d4a3908526ff420ac678"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/events?past=true&future=true&byGallery=true",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"events"
+							],
+							"query": [
+								{
+									"key": "past",
+									"value": "true"
+								},
+								{
+									"key": "future",
+									"value": "true"
+								},
+								{
+									"key": "byGallery",
+									"value": "true"
+								},
+								{
+									"key": "galleries[]",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/event/6330dd47e63f2abc22534b5a",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"event",
+								"6330dd47e63f2abc22534b5a"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Test event",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test descr",
+									"type": "text"
+								},
+								{
+									"key": "artists[]",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/event",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"event"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "artists[]",
+									"value": "62de9f71ce57bff590aa46c1",
+									"type": "text"
+								},
+								{
+									"key": "deleteFile",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "byGallery",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/event/6330dd47e63f2abc22534b5a",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"event",
+								"6330dd47e63f2abc22534b5a"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test category 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/event/6250d4a3908526ff420ac678",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"event",
+								"6250d4a3908526ff420ac678"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pages",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/pages",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"pages"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/page/test-page",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"page",
+								"test-page"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test page\",\n    \"slug\": \"test-page\",\n    \"content\": \"some test content\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/page",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"page"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test page 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/page/test-page",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"page",
+								"test-page"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test category 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/page/test-page",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"page",
+								"test-page"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "purchases",
+			"item": [
+				{
+					"name": "list purchases",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/purchases",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "62d6f456f7bb1b5a5c4d5bcc",
+									"description": "Gallery ID if it's gallery's arts",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list purchase arts",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/purchases/arts?from=11-02-2022&to=11-17-2022&type=sell&user=62d6f9d3dcd58f0e787fbe61",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"purchases",
+								"arts"
+							],
+							"query": [
+								{
+									"key": "csv",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "11-02-2022"
+								},
+								{
+									"key": "to",
+									"value": "11-17-2022"
+								},
+								{
+									"key": "type",
+									"value": "sell"
+								},
+								{
+									"key": "user",
+									"value": "62d6f9d3dcd58f0e787fbe61"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list purchase stats",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/purchases/stats?from=01-01-2001&groupBy=gallery&type=sell&to=11-17-2022",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"purchases",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "01-01-2001"
+								},
+								{
+									"key": "gallery",
+									"value": "62d6f456f7bb1b5a5c4d5bcf",
+									"disabled": true
+								},
+								{
+									"key": "csv",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "user",
+									"value": "62d6f9d3dcd58f0e787fbe61",
+									"disabled": true
+								},
+								{
+									"key": "groupBy",
+									"value": "gallery"
+								},
+								{
+									"key": "type",
+									"value": "sell"
+								},
+								{
+									"key": "to",
+									"value": "11-17-2022"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list purchase chart",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/purchases/chart?from=10-10-2022&to=11-10-2022&artists=62d6f456f7bb1b5a5c4d5bd2&groupBy=day",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"purchases",
+								"chart"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "10-10-2022"
+								},
+								{
+									"key": "to",
+									"value": "11-10-2022"
+								},
+								{
+									"key": "artists",
+									"value": "62d6f456f7bb1b5a5c4d5bd2"
+								},
+								{
+									"key": "galleries",
+									"value": "62d6f456f7bb1b5a5c4d5bcf",
+									"disabled": true
+								},
+								{
+									"key": "groupBy",
+									"value": "day"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list user purchases",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/purchases?user=62d6f456f7bb1b5a5c4d5bcc",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "62d6f456f7bb1b5a5c4d5bcc",
+									"description": "Gallery ID if it's gallery's arts"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get single purchase",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/purchase/629e14623040677eed626673",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"purchase",
+								"629e14623040677eed626673"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "requests",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/requests?type=artist&gallery=6294b8dcb74ad62b20c5df7f",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"requests"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "artist"
+								},
+								{
+									"key": "gallery",
+									"value": "6294b8dcb74ad62b20c5df7f"
+								},
+								{
+									"key": "only",
+									"value": "approvedByAdminAt",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/request/6295e6813417d9740a15ea32",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"request",
+								"6295e6813417d9740a15ea32"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "approve / reject",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"approve\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/request/63c11db510a1b42c973096c2",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"request",
+								"63c11db510a1b42c973096c2"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test category 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/emotion/6250d4a3908526ff420ac678",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"emotion",
+								"6250d4a3908526ff420ac678"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rooms",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/rooms",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"rooms"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/room/624da75a46ecdf91d4618878",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"624da75a46ecdf91d4618878"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Test Room",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "The very first 360 room ever",
+									"type": "text"
+								},
+								{
+									"key": "ip",
+									"value": "192.168.0.50",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "London, UK",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "12, Test route, London, UK, 1234",
+									"type": "text"
+								},
+								{
+									"key": "photos[]",
+									"type": "file",
+									"src": [
+										"/Users/denysaw/Downloads/6243af7ccb41f9baa23d2eecd.jpeg",
+										"/Users/denysaw/Desktop/Screenshot 2022-04-04 at 18.02.36.png"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/room",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"room"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Test Room 2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "The very first 360 room ever",
+									"type": "text"
+								},
+								{
+									"key": "ip",
+									"value": "192.168.0.50",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "London, UK",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "12, Test route, London, UK, 1234",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "photoIds[]",
+									"value": "624e128deb4ef19ae26f7622",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/room/624e128beb4ef19ae26f7620",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"624e128beb4ef19ae26f7620"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test category 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/room/624d746994a14086f41592b5",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"624d746994a14086f41592b5"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscribe",
+			"item": [
+				{
+					"name": "subscribe",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/subscribe",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"subscribe"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "test push",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/test/push",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"push"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "types",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/types",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"types"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/type/624375710543b2ae61f45f2e",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"type",
+								"624375710543b2ae61f45f2e"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test type\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/type",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"type"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test type 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/type/62488e6c56475753e2b03231",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"type",
+								"62488e6c56475753e2b03231"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/type/624375710543b2ae61f45f2e",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"type",
+								"624375710543b2ae61f45f2e"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "me (get my user)",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/me",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "me (edit my user)",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"wallet\": \"0xf7591170Ef31950aF0CCFA69a65F3d237362828c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/user/me",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "my avatar",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/denysaw/Downloads/6243af7ccb41f9baa23d2eecd.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/user/me/avatar",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								"avatar"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "my banner",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/denysaw/Downloads/2022-04-21 19.30.18.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/user/me/banner",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								"banner"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "top-up my balance",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/user/me/top-up",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								"top-up"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "I liked",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/me/liked",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								"liked"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "liked",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/62d6f9d3dcd58f0e787fbe64/liked",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"62d6f9d3dcd58f0e787fbe64",
+								"liked"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/users?sort=createdAt&search=Luca&gallery=62d6f456f7bb1b5a5c4d5bcf",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "createdAt"
+								},
+								{
+									"key": "search",
+									"value": "Luca"
+								},
+								{
+									"key": "gallery",
+									"value": "62d6f456f7bb1b5a5c4d5bcf"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list galleries",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/users?role=gallery&approved=true",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "gallery"
+								},
+								{
+									"key": "approved",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list artists",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/users?role=artist",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "artist"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "my arts",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/me/arts",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								"arts"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "processed,sent for approval,approved,rejected",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "62d6f456f7bb1b5a5c4d5bd2",
+									"disabled": true
+								},
+								{
+									"key": "sold",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "my stats",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/me/stats?from=2022-08-27&to=2022-10-19",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2022-08-27"
+								},
+								{
+									"key": "to",
+									"value": "2022-10-19"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "my events",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/me/events",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								"events"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2022-08-27",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "2022-10-19",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "my purchases",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/me/purchases?from=2022-08-27&to=2022-09-18",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2022-08-27"
+								},
+								{
+									"key": "to",
+									"value": "2022-09-18"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "list arts",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/62d6f9d3dcd58f0e787fbe64/arts?sold=true",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"62d6f9d3dcd58f0e787fbe64",
+								"arts"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "published",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "62d6f456f7bb1b5a5c4d5bd2",
+									"disabled": true
+								},
+								{
+									"key": "sold",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/63bd8d4310295b7db6d0230f",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"63bd8d4310295b7db6d0230f"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"wallet\": \"123123123123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{editor_url}}/api/user/628cc70b426d2cd3b45967d1",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"628cc70b426d2cd3b45967d1"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/6273c66d7f68da458e8aedb4",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"6273c66d7f68da458e8aedb4"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				},
+				{
+					"name": "resend",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{editor_url}}/api/user/resend/denysaw@gmail.com",
+							"host": [
+								"{{editor_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"resend",
+								"denysaw@gmail.com"
+							]
+						},
+						"description": "Set della configurazione dei device all'interno della stanza."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "https://api.coinbase.com/v2/prices/ETH-EUR/spot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.coinbase.com/v2/prices/ETH-GBP/spot",
+					"protocol": "https",
+					"host": [
+						"api",
+						"coinbase",
+						"com"
+					],
+					"path": [
+						"v2",
+						"prices",
+						"ETH-GBP",
+						"spot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{editor_url}}/api/web3/sign",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hash\": \"0xd7f5d440c9c8cfb533b2330dcc069723e3e1d48481d2f70a469e3a8346a1f23f\",\r\n    \"network\": \"polygon\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{editor_url}}/api/web3/sign",
+					"host": [
+						"{{editor_url}}"
+					],
+					"path": [
+						"api",
+						"web3",
+						"sign"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

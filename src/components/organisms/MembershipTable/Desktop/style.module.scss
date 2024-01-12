@@ -1,0 +1,19 @@
+@use '@styles/base.scss';
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+
+  @media (max-width: base.$breakpoint-xxl) {
+    gap: 50px;
+  }
+
+  @media (max-width: base.$breakpoint-lg) {
+    gap: 30px;
+  }
+
+  @media (max-width: base.$breakpoint-md) {
+    display: none;
+  }
+}

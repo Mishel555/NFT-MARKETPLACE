@@ -1,0 +1,69 @@
+@use '@styles/base.scss';
+
+.root {
+  border-radius: 16px;
+  border: 2px dashed base.$grey-extra;
+  margin: 0 20px;
+  padding: 20px 10px;
+  background-color: base.$violet-extra;
+
+  &__title {
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: center;
+
+    &_list {
+      padding-left: 15px;
+      margin: 10px 0 0 15px;
+
+      &:nth-child(2) {
+        margin-left: 45px;
+      }
+
+      li {
+        font-size: 17px;
+        line-height: 32px;
+        color: base.$black;
+      }
+    }
+  }
+
+  &__controls {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &_btn {
+      height: 50px;
+      border-radius: 2px;
+      border: 2px solid base.$violet;
+      padding: 0 25px;
+
+      color: base.$white;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: .2s ease-in-out;
+      background-color: base.$violet;
+
+      &:hover {
+        border-color: base.$black;
+        background-color: base.$black;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,120 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 25px;
+
+  &__group {
+    margin-top: 25px;
+    max-height: 350px;
+    overflow-y: auto;
+    list-style: none;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: base.$grey-ultra-normal;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: base.$grey-light;
+    }
+  }
+
+  &__option {
+    font-size: 13px;
+    font-weight: 700;
+    color: base.$black;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+
+    input {
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer;
+
+      &:checked,
+      &:not(:checked) {
+        position: absolute;
+        left: -9999px;
+      }
+
+      &:checked + label,
+      &:not(:checked) + label {
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        line-height: 22px;
+      }
+
+      &:checked + label:before,
+      &:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid #D8D8D8;
+        border-radius: 100%;
+        background: base.$white;
+      }
+
+      &:checked + label:after,
+      &:not(:checked) + label:after {
+        content: '';
+        width: 14px;
+        height: 14px;
+        background: base.$violet;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+
+      &:not(:checked) + label:after {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      &:checked + label:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 1px solid #D8D8D8;
+        border-radius: 4px;
+        padding: 10px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    }
+  }
+}

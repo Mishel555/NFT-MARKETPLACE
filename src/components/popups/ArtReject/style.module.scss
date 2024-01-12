@@ -1,0 +1,46 @@
+@use '@styles/base';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    padding: 15px;
+    background-color: base.$white;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    &_btn {
+      font-size: 14px;
+      font-weight: 600;
+      color: base.$white;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      width: 175px;
+      height: 50px;
+      background-color: base.$violet;
+      border: none;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      margin-top: 50px;
+      margin-right: 10px;
+      transition: 0.4s ease-in-out;
+    }
+  }
+}

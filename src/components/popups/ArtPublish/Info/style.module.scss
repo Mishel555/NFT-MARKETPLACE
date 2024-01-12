@@ -1,0 +1,54 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 20px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 44px;
+
+    @media (max-width: base.$breakpoint-md) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid base.$grey-extra;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__itemWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    list-style: none;
+  }
+
+  &__itemSection {
+    flex: 1;
+  }
+
+  &__item {
+    border-radius: 18px;
+    border: 1px solid base.$grey-extra;
+    padding: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}

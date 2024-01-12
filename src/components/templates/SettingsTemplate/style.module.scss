@@ -1,0 +1,32 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  max-width: 1680px;
+  min-height: base.$body;
+  margin: auto;
+  padding: 30px 60px 30px;
+
+  display: flex;
+  gap: 160px;
+
+  @media (max-width: base.$breakpoint-xl) {
+    gap: 85px;
+  }
+
+  @media (max-width: base.$breakpoint-lg-big) {
+    gap: 15px;
+  }
+
+  @media (max-width: base.$breakpoint-lg) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: base.$breakpoint-md) {
+    flex-direction: column;
+    gap: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

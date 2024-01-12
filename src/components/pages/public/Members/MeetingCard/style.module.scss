@@ -1,0 +1,81 @@
+@use '@styles/base.scss';
+
+.root {
+  margin: auto;
+  width: 100%;
+  max-width: 1070px;
+
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @media (max-width: base.$breakpoint-md) {
+    flex-direction: column;
+  }
+
+
+
+  &__content {
+    flex: 1.5;
+    min-height: 450px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 40px;
+    border: 1px solid base.$grey-extra-light;
+
+    @media (max-width: base.$breakpoint-md) {
+      min-height: unset;
+      padding: 32px 20px;
+    }
+
+    &_title {
+      font-size: 25px;
+      text-align: left;
+      text-transform: uppercase;
+      font-family: "Druk", sans-serif;
+
+      @media (max-width: base.$breakpoint-sm-big) {
+        font-size: 22px;
+      }
+    }
+
+    &_description {
+      margin-top: 30px;
+
+      font-size: 16px;
+      text-align: left;
+      color: base.$grey;
+    }
+
+    &_btn {
+      padding: 8px 12px;
+      border-radius: 24px;
+      border: 1px solid base.$black;
+
+      font-size: 17px;
+      font-weight: 700;
+      color: base.$white;
+      text-transform: uppercase;
+
+      transition: .3s ease-in-out;
+      background-color: base.$black;
+
+
+      &:hover {
+        color: base.$black;
+        background-color: base.$white;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

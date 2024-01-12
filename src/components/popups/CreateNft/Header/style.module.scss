@@ -1,0 +1,46 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  padding: 15px 20px 5px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+
+    @media (max-width: base.$breakpoint-md) {
+      padding: 10px 0;
+    }
+
+    border-bottom: 1px solid base.$grey-extra;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  &__step {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__close {
+    border: none;
+    background: none;
+
+    path {
+      transition: .2s ease-in-out;
+    }
+
+    &:hover {
+      path {
+        stroke: base.$violet;
+      }
+    }
+  }
+}

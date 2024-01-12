@@ -1,0 +1,43 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 20px;
+
+  &__btnGroup {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &_btn {
+      width: 100px;
+      height: 35px;
+
+      border-radius: 7px;
+      border: 1px solid base.$violet;
+
+      text-transform: uppercase;
+      transition: .2s ease-in-out;
+    }
+
+    &_submit {
+      color: base.$white;
+      background-color: base.$violet;
+
+      &:hover {
+        color: base.$violet;
+        background-color: base.$violet-light;
+      }
+    }
+
+    &_delete {
+      color: base.$violet;
+      background-color: transparent;
+
+      &:hover {
+        color: base.$violet;
+        background-color: base.$violet-light;
+      }
+    }
+  }
+}

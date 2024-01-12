@@ -1,0 +1,58 @@
+@use '@styles/base.scss';
+
+.root {
+  display: grid;
+  align-items: center;
+
+  &__input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+
+    &:checked + label:before {
+      background: #7A52F4;
+    }
+
+    &:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 8px;
+      width: 6px;
+      height: 14px;
+      border: solid #ffffff;
+      background: #7A52F4;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1px solid #D8D8D8;
+      border-radius: 4px;
+      padding: 10px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  }
+
+  &__highlight {
+    &:before {
+      background-color: base.$red-light-ultra;
+    }
+  }
+}

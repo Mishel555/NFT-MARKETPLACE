@@ -1,0 +1,112 @@
+@use '@styles/main';
+@use '@styles/base';
+
+.root {
+  width: 100%;
+
+  &__header {
+    text-align: center;
+
+    &_title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: base.$black;
+      margin-bottom: 25px;
+    }
+
+    &_subTitle {
+      font-size: 18px;
+      font-weight: 700;
+      color: base.$black;
+    }
+  }
+
+  &__info {
+    margin-top: 20px;
+    display: grid;
+    gap: 30px;
+
+    &__privacy_wrapper {
+      &_first_title, &_second_title {
+        margin: 0;
+        font-size: 15px;
+      }
+
+      &_first_title {
+        color: base.$black;
+      }
+
+      &_second_title {
+        color: base.$grey-main;
+        margin-top: 5px;
+      }
+
+      &_description {
+        color: base.$grey-main;
+        font-style: italic;
+        font-size: 14px;
+        margin-top: 8px;
+      }
+    }
+
+    &__owner_wrapper {
+      &_title {
+        margin: 0;
+        font-size: 15px;
+        color: base.$black;
+      }
+
+      ul {
+        margin: 8px 0 25px;
+        padding: 0;
+
+        li {
+          list-style-type: none;
+          font-size: 14px;
+          color: base.$grey-main;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    button {
+      font-size: 18px;
+      font-weight: 700;
+      color: base.$black;
+      width: 100%;
+      border: 2px solid base.$grey-darker;
+      border-radius: 2px;
+      background: none;
+      padding: 12px;
+      margin-top: 25px;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:last-child {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .offer_text {
+    font-size: 14px;
+    font-weight: 600;
+    color: base.$grey-main;
+    margin: 20px 0;
+
+    a {
+      color: base.$grey-main;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 20px;
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid base.$grey-extra;
+  }
+
+  &__message {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__wrapper {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__disabled {
+    pointer-events: none;
+    opacity: .7;
+  }
+}

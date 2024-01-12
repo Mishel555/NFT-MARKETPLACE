@@ -1,0 +1,66 @@
+@use '@styles/base';
+
+.root {
+  max-width: 650px;
+  margin: 10px 0;
+  padding: 10px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+    @media (max-width: base.$breakpoint-md) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__title {
+    flex: 1;
+    font-weight: 700;
+    color: base.$grey;
+  }
+
+  &__input {
+    flex: 3;
+    height: 55px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid base.$grey-light-normal;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    color: base.$grey;
+    background-color: base.$grey-light-normal;
+  }
+
+  &__area {
+    height: 125px;
+    resize: none;
+
+    &::-webkit-scrollbar-track {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      border: 2px solid base.$grey-ultra;
+      background-color: base.$grey-normal-dark;
+    }
+  }
+
+  &__error {
+    font-size: 13px;
+    color: base.$red;
+    text-align: right;
+  }
+}

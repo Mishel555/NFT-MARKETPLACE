@@ -1,0 +1,49 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 30px;
+
+  &__wrapper {
+    margin: 35px 0;
+    display: grid;
+    gap: 50px;
+  }
+
+  &__more {
+    display: block;
+    border: none;
+    border-radius: 10px;
+    margin: 50px auto 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: base.$black;
+    background: none;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__new {
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 30px;
+
+    font-weight: 600;
+    color: base.$white;
+
+    border: 2px solid base.$violet;
+    background-color: base.$violet;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      color: base.$violet;
+      background-color: base.$white;
+    }
+  }
+}

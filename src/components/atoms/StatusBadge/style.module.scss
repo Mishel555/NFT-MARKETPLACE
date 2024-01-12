@@ -1,0 +1,73 @@
+@use '@styles/base.scss';
+
+.root {
+  margin: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    &_all {
+      background-color: base.$coffee-dark;
+    }
+
+    &_processed {
+      background-color: base.$blue-ocean;
+    }
+
+    &_approvedByAdminAt, &_approved, &_inMyReview {
+      background-color: base.$purple;
+    }
+
+    &_rejectedByAdminAt {
+      background-color: base.$black;
+    }
+
+    &_approvedByGalleryAt, &_OnApproval, &_onCollaboratorsReview {
+      background-color: base.$yellow-orange;
+    }
+
+    &_rejectedByGalleryAt {
+      background-color: base.$red-dark;
+    }
+
+    &_acceptedOfferAt, &_published {
+      background-color: base.$green;
+    }
+
+    &_declinedOfferAt, &_rejected {
+      background-color: base.$red;
+    }
+
+    &_allArtworks, &_inReviewByAdmin, &_sold, &_closed, &_onGalleryApproval {
+      background-color: base.$blue-primary;
+    }
+  }
+
+  &__status, &__date {
+    font-size: 13px;
+    line-height: 17px;
+    text-transform: capitalize;
+  }
+
+  &__status {
+    color: base.$grey;
+    font-weight: 600;
+
+    &_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__date {
+    margin-left: 15px;
+    color: base.$grey-light;
+  }
+}

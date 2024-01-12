@@ -1,0 +1,26 @@
+@use '@styles/base';
+
+.root {
+  min-width: 60px;
+  height: 45px;
+  margin: 0 10px;
+  padding: 0 5px;
+
+  border: 1px solid #CFDBD5;
+  border-radius: 18px;
+  background-color: #EBF0F0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 5px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+}

@@ -1,0 +1,165 @@
+@use '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: base.$popup-dark-background;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    color: base.$grey;
+  }
+
+  &__container {
+    width: 100%;
+  }
+
+  &__wrapper {
+    max-width: 780px;
+    max-height: 690px;
+    padding: 20px;
+
+    position: absolute;
+    inset: 0;
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 8px;
+    background-color: base.$white;
+  }
+
+  &__area {
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      height: 200px;
+    }
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__upload {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1500;
+
+    width: 35px;
+    height: 35px;
+    border: 1px solid base.$white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+    background-color: base.$white;
+
+    &:hover {
+      border-color: base.$violet;
+      background-color: base.$violet;
+    }
+  }
+
+  &__reset {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1500;
+
+    width: 70px;
+    height: 30px;
+    color: base.$white;
+    border-radius: 5px;
+    border: 1px solid base.$violet;
+
+    transition: .2s ease-in-out;
+    background-color: base.$violet;
+
+    &:hover {
+      border-color: base.$black;
+      background-color: base.$black;
+    }
+  }
+
+  &__actions {
+    width: 100%;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      justify-content: center;
+    }
+
+    &_btn {
+      padding: 10px 40px;
+
+      border: 2px solid;
+      border-radius: 5px;
+
+      font-size: 14px;
+      font-weight: 600;
+      color: base.$white;
+
+      background: none;
+      transition: .2s ease-in-out;
+    }
+
+    &_submit {
+      background-color: base.$black;
+
+      &:hover {
+        color: base.$black;
+        background-color: base.$white;
+        border-color: base.$black;
+      }
+    }
+
+    &_cancel {
+      background-color: base.$violet;
+
+      &:hover {
+        background-color: base.$violet-light;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    border: none;
+    background: none;
+  }
+}

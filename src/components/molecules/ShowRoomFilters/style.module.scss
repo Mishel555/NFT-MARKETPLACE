@@ -1,0 +1,35 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+
+  &__item {
+    flex-shrink: 0;
+    padding: 10px 30px;
+    border: 1px solid rgba(207, 219, 213, 0.6);
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &_active {
+      background: base.$purple-violet-light;
+      color: base.$white;
+      border-color: base.$purple-violet-light;
+    }
+
+    @media screen and (max-width: base.$breakpoint-sm) {
+      padding: 10px;
+    }
+  }
+}

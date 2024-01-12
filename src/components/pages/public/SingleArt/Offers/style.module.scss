@@ -1,0 +1,143 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  max-width: 760px;
+  border: 1px solid base.$grey-extra-light;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  overflow: hidden;
+
+  &__intro {
+    width: 100%;
+    border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_btn {
+      border: none;
+      background: none;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &_active {
+      transform: rotate(90deg);
+    }
+  }
+
+  @media (max-width: base.$breakpoint-md) {
+    margin-bottom: 35px;
+  }
+
+  &__main {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  &__wrapper {
+    max-height: 200px;
+    overflow-y: auto;
+
+    padding-right: 10px;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: base.$grey-ultra-normal;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: base.$grey-light;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+  }
+
+  &__item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: base.$black;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    width: 150px;
+    flex-shrink: 0;
+
+    font-size: 14px;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+    &:nth-child(1) {
+      text-align: left;
+    }
+
+    &:nth-child(2) {
+      text-align: center;
+    }
+
+    &:nth-child(3) {
+      text-align: right;
+    }
+
+    @media (max-width: base.$breakpoint-md) {
+      width: 100px;
+    }
+
+    a {
+      color: base.$black;
+      text-decoration-line: none;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}

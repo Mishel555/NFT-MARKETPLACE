@@ -1,0 +1,22 @@
+@use '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: base.$popup-dark-background;
+
+  &__main {
+    max-width: 854px;
+    margin: auto;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+
+    transform: translateY(-15%);
+    background-color: base.$white;
+  }
+
+}

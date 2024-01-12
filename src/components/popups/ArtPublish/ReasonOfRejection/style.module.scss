@@ -1,0 +1,18 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 20px;
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid base.$grey-extra;
+  }
+
+  &__content {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,21 @@
+@use '@styles/base';
+
+.root {
+  height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: base.$breakpoint-md) {
+    height: 350px;
+  }
+
+  @media (max-width: base.$breakpoint-sm) {
+    height: 250px;
+  }
+
+  svg {
+    transform: scale(1.1);
+  }
+}

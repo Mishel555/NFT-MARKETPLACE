@@ -1,0 +1,47 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-bottom: 20px;
+
+  &__wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid base.$grey-extra;
+  }
+
+  &__btn {
+    height: 40px;
+    padding: 0 33px;
+    border-radius: 18px;
+    border: 1px solid base.$grey-extra;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    background-color: base.$white;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+  }
+
+  &__active {
+    color: base.$violet;
+    border-color: base.$violet-light;
+    background-color: base.$violet-light;
+    pointer-events: none;
+  }
+}

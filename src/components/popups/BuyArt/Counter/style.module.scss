@@ -1,0 +1,20 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 75px;
+  height: 55px;
+
+  border-radius: 18px;
+  border: 1px solid base.$grey-extra;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  @media (max-width: base.$breakpoint-md) {
+    max-width: 70px;
+  }
+}

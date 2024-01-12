@@ -1,0 +1,104 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 24px;
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 800;
+    color: base.$black;
+    margin-top: 38px;
+  }
+
+  &_group {
+    background: rgba(235, 240, 240, 0.5);
+    border-radius: 16px;
+    padding: 22px 26px 10px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+
+    &__item {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+      margin-bottom: 16px;
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    &__label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: base.$grey-main;
+    }
+
+    &__input {
+      width: 100%;
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$black;
+      border: none;
+      background: none;
+      margin-top: 10px;
+
+      &::-webkit-input-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: base.$grey-main;
+      }
+
+      &::-moz-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: base.$grey-main;
+      }
+
+      &:-ms-input-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: base.$grey-main;
+      }
+
+      &:-moz-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: base.$grey-main;
+      }
+    }
+  }
+
+  &__add {
+    text-align: right;
+
+    &_btn {
+      width: 90px;
+      height: 35px;
+
+      border-radius: 5px;
+      border: 1px solid base.$violet;
+      text-transform: uppercase;
+
+      color: base.$white;
+      background-color: base.$violet;
+      transition: .2s ease-in-out;
+
+      &:disabled {
+        opacity: .7;
+        cursor: not-allowed;
+      }
+
+      &:hover:not([disabled]) {
+        color: base.$violet;
+        background-color: base.$white;
+      }
+    }
+  }
+}

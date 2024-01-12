@@ -1,0 +1,15 @@
+@use '../../../../styles/base';
+
+.root {
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: base.$white;
+  }
+
+  .info {
+    font-size: 14px;
+    font-weight: 400;
+    color: base.$grey-normal-extra;
+  }
+}

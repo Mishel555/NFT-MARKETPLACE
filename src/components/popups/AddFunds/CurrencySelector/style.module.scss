@@ -1,0 +1,84 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100px;
+  position: relative;
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__btn {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    border: none;
+    background: none;
+
+    svg {
+      transition: .4s ease-in-out;
+    }
+
+    &_active {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__wrapper {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid base.$grey-extra-light;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1500;
+
+    cursor: pointer;
+    list-style: none;
+    background-color: base.$white;
+  }
+
+  &__option {
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    font-weight: 600;
+    transition: .2s ease-in-out;
+
+    &_btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      border: none;
+      background: none;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+  }
+}

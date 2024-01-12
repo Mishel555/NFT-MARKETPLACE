@@ -1,0 +1,26 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 20px;
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid base.$grey-extra;
+  }
+
+  &__area {
+    margin-top: 20px;
+
+    width: 100%;
+    height: 100px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid base.$grey-extra;
+
+    font-size: 12px;
+    resize: none;
+  }
+}

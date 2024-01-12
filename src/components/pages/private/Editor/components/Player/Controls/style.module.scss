@@ -1,0 +1,103 @@
+@use '@styles/base';
+
+.root {
+  padding: 15px 10px;
+  position: relative;
+
+  background-color: base.$grey-dark;
+}
+
+.lines_root {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.buttons_group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.controls__button {
+  background: none;
+  border: none;
+
+  &:hover {
+    svg {
+      transition: .2s ease-in-out;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.controls__button_disabled {
+  opacity: .5;
+}
+
+.input_group {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  .time_input {
+    width: 120px;
+  }
+
+  .video_speed_root {
+    width: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      border: none;
+      background: none;
+    }
+  }
+
+  .time_input, .video_speed_root {
+    height: 30px;
+    border: none;
+    margin-left: 10px;
+    padding: 0 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+
+    color: base.$white;
+    background-color: base.$grey;
+  }
+
+  .video_speeds_box {
+    width: 90px;
+    margin: 5px 10px;
+    padding: 15px;
+    border: 1px solid base.$white;
+    border-radius: 2px;
+
+    position: absolute;
+    z-index: 1000;
+
+    color: base.$white;
+    background-color: base.$grey-brown;
+
+    list-style-type: none;
+
+    li {
+      margin: 10px 0;
+      cursor: pointer;
+      font-size: 13px;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}

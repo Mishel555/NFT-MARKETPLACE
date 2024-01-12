@@ -1,0 +1,57 @@
+@use '@styles/base.scss';
+@use '@styles/main.scss';
+
+.root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .content_root {
+    width: 100%;
+  }
+
+  &__metamask {
+    padding-bottom: 25px;
+    border-bottom: 1px solid base.$grey-main;
+  }
+
+  &__form {
+    width: 100%;
+    margin: 40px auto 0;
+    position: relative;
+
+    &_wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+
+      &_btn {
+        font-size: 18px;
+        font-weight: 700;
+        color: base.$black;
+        width: 100%;
+        border: 2px solid base.$grey-darker;
+        border-radius: 2px;
+        background: none;
+        padding: 12px;
+        transition: 0.4s ease-in-out;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:nth-child(2) {
+          margin-left: 15px;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

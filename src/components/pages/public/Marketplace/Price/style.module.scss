@@ -1,0 +1,132 @@
+@use '@styles/base.scss';
+@import '@styles/main.scss';
+
+.root {
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 30px;
+  }
+
+  &__inputBox {
+    border: 1px solid rgba(207, 219, 213, 0.6);
+    border-radius: 4px;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 140px;
+
+    span {
+      font-size: 12px;
+      font-weight: 500;
+      color: base.$black;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$black;
+      padding-left: 40px;
+      border: none;
+      max-width: 140px;
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-top: 10px;
+    padding: 15px 10px;
+    border: 1px solid base.$grey-normal-extra;
+
+    img {
+      width: 17px;
+      height: 17px;
+    }
+
+    &_preview {
+      font-size: 15px;
+      font-weight: 700;
+      color: base.$black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+    }
+
+    &_toggle {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+
+      svg {
+        transition: transform .2s ease-in-out;
+      }
+
+      &_active {
+        svg {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+  }
+
+  &__menu {
+    margin-top: 10px;
+    display: grid;
+    justify-content: center;
+    list-style: none;
+    text-transform: uppercase;
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  &_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    &__currency {
+      font-size: 12px;
+      font-weight: 500;
+      color: base.$black;
+
+      button {
+        border: none;
+        background: none;
+        transition: color .2s ease-in-out;
+        color: base.$black;
+        text-transform: uppercase;
+        margin-left: 5px;
+
+        &:hover {
+          color: base.$grey-light;
+        }
+      }
+    }
+
+    &__clear {
+      font-size: 12px;
+      font-weight: 500;
+      color: base.$black;
+      text-decoration: underline;
+      border: none;
+      background: none;
+    }
+  }
+}

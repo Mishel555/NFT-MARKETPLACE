@@ -1,0 +1,31 @@
+@use '../../../../../../../styles/base';
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs__change_button {
+  flex: 1;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  padding: 13px 20px;
+  text-align: left;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: base.$grey-light;
+  background-color: base.$grey-dark;
+}
+
+.active_change_button {
+  color: base.$white;
+  background-color: base.$grey-brown;
+}
+
+.tabs_content {
+  min-width: 400px;
+}

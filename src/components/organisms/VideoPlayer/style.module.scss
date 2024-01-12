@@ -1,0 +1,32 @@
+.root {
+  width: 100%;
+
+  display: grid;
+
+  .meta_root {
+    margin-top: 15px;
+
+    display: flex;
+    align-items: start;
+    gap: 150px;
+  }
+
+  &__loader {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+
+    transform: translateY(-40%);
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      transform: scale(1.5);
+    }
+  }
+}
+
+

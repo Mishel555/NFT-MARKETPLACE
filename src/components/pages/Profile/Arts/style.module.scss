@@ -1,0 +1,28 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  margin: 20px 0;
+
+  &__controls {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: base.$breakpoint-md) {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 370px));
+    gap: 10px;
+  }
+
+  &__loader {
+    margin: 15px;
+    display: grid;
+    justify-content: center;
+  }
+}

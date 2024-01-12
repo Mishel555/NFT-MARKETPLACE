@@ -1,0 +1,16 @@
+.mainBannerSlickRoot .slick-slider {
+  margin: 0 !important;
+}
+
+.mainBannerSlickRoot .slick-track {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.mainBannerSlickRoot .slick-slide {
+  width: 100%;
+  max-width: unset !important;
+  margin: auto;
+}
+

@@ -1,0 +1,62 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+
+  &_btn {
+    background: none;
+    border: none;
+
+    svg {
+      transition: fill .2s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        fill: #000;
+      }
+    }
+  }
+
+  &_counter {
+    font-size: 17px;
+    font-weight: 700;
+    color: base.$black;
+    margin-left: 10px;
+
+    background: none;
+    border: none;
+  }
+
+  &__wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1500;
+
+
+    width: 150px;
+    border: 1px solid base.$grey;
+    border-radius: 5px;
+    padding: 10px;
+    list-style: none;
+    background-color: base.$white;
+
+    &_item {
+      margin: 10px 0;
+
+      a {
+        font-size: 13px;
+        color: base.$grey;
+        text-decoration-line: none;
+
+        transition: color .2s ease-in-out;
+
+        &:hover {
+          color: base.$black
+        }
+      }
+    }
+  }
+}

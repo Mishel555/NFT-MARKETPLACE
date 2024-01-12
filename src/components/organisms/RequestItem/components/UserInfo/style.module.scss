@@ -1,0 +1,84 @@
+@use '@styles/main';
+@use '@styles/base';
+
+.root {
+  padding-top: 15px;
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid base.$grey;
+    border-bottom: 1px solid base.$grey;
+
+    @media screen and (max-width: base.$breakpoint-xl) {
+      justify-content: space-between;
+    }
+  }
+
+  &__all {
+    max-width: 430px;
+  }
+
+  &__status {
+    max-width: 350px;
+    margin-left: 20%;
+
+    @media screen and (max-width: base.$breakpoint-xxl) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: base.$breakpoint-xl) {
+      max-width: 500px;
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    color: base.$grey-normal;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+  }
+
+  &__label {
+    width: 200px;
+    font-size: 14px;
+    font-weight: 600;
+    color: base.$grey;
+    margin: 0;
+  }
+
+  &__text {
+    width: 200px;
+    font-size: 14px;
+    color: base.$grey;
+    margin-left: 5px;
+  }
+
+  &__date {
+    font-size: 13px;
+    color: base.$grey-normal;
+  }
+
+  &__status {
+    &__inner {
+      margin-top: 15px;
+    }
+  }
+
+  a {
+    color: base.$grey;
+    text-decoration-line: none;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

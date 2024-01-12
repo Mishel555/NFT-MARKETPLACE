@@ -1,0 +1,86 @@
+@use '@styles/base.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 25px;
+  border-top: 1px solid base.$grey-extra-light;
+
+  &__title {
+    margin-bottom: 15px;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__time {
+    font-size: 15px;
+    font-weight: 700;
+    color: base.$grey;
+  }
+
+  &__wrapper {
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      gap: 20px;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: grid;
+    gap: 10px;
+
+    &_name {
+      font-size: 15px;
+      font-weight: 700;
+      color: base.$grey;
+    }
+
+    &_value {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      gap: 5px;
+
+      &_name {
+        font-size: 12px;
+      }
+
+      &_value {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__close {
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    margin-top: 15px;
+    align-self: flex-end;
+
+
+    font-size: 16px;
+    font-weight: 600;
+    color: base.$white;
+    text-transform: uppercase;
+
+    transition: .2s ease-in-out;
+    background-color: base.$black;
+
+    &:hover {
+      color: base.$black;
+      border: 3px solid base.$black;
+      background-color: base.$white;
+    }
+  }
+}

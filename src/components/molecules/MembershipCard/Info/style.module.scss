@@ -1,0 +1,51 @@
+@use '@styles/base.scss';
+
+.root {
+  padding: 20px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__bottom {
+    margin-top: 30px;
+
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__button {
+    width: 200px;
+    border-radius: 40px;
+    border: 2px solid base.$black;
+    padding: 10px 30px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: base.$black;
+
+    transition: .2s ease-in-out;
+    background-color: base.$white;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

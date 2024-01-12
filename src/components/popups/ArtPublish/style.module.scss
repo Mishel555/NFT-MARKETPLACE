@@ -1,0 +1,64 @@
+@use '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: base.$popup-dark-background;
+
+  &__main {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 30px 24px;
+
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+
+    overflow-y: auto;
+    background-color: base.$white;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: base.$grey-ultra-normal;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: base.$grey-light;
+    }
+
+    @media (max-width: base.$breakpoint-lg) {
+      width: calc(100% - 30px);
+    }
+
+    @media (max-width: base.$breakpoint-md) {
+      padding: 25px;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    inset: 0;
+    z-index: 1000;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    color: base.$purple-violet-light;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    svg {
+      transform: scale(1.5);
+    }
+  }
+}

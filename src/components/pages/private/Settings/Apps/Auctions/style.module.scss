@@ -1,0 +1,118 @@
+@use '@styles/base.scss';
+
+.root {
+  margin: 20px 0;
+  max-height: 400px;
+
+  border-radius: 10px;
+  border: 1px solid base.$grey-extra-light;
+  padding: 20px;
+
+  overflow-y: auto;
+  overflow-x: auto;
+
+  &__table {
+    @media (max-width: base.$breakpoint-md) {
+      min-width: 600px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid base.$grey-extra-light;
+  }
+
+  &__label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+
+    &:nth-child(2) {
+      text-align: center;
+    }
+
+    &:nth-child(3) {
+      text-align: right;
+    }
+  }
+
+  &__title {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 700;
+
+    display: flex;
+    align-self: center;
+    gap: 10px;
+
+    color: base.$black;
+    text-decoration: none;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__item {
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid base.$grey-extra-light;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    &:last-of-type {
+      border: none;
+    }
+
+    &_action {
+      width: 100px;
+      padding: 7px 10px;
+      border-radius: 3px;
+      border: 1px solid base.$black;
+
+      font-size: 10px;
+      font-weight: 500;
+      color: base.$white;
+
+      transition: .3s ease-in-out;
+      background-color: base.$black;
+
+      &:hover {
+        background-color: base.$violet;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &__more {
+    width: 100px;
+    margin-top: 30px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    border: 1px solid base.$black;
+
+    font-size: 10px;
+    font-weight: 500;
+    color: base.$white;
+
+    transition: .3s ease-in-out;
+    background-color: base.$black;
+
+    &:hover {
+      background-color: base.$violet;
+    }
+  }
+}

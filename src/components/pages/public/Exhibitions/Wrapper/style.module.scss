@@ -1,0 +1,33 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 60px;
+
+  &__message {
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 40px;
+  }
+
+  &__more {
+    display: block;
+    border: none;
+    border-radius: 10px;
+    margin: 50px auto 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: base.$black;
+    background: none;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

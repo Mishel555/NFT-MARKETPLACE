@@ -1,0 +1,62 @@
+@use '@styles/base';
+
+.root {
+  &_group {
+    position: relative;
+    margin-bottom: 10px;
+
+    &__input {
+      font-size: 15px;
+      font-weight: 700;
+      width: 100%;
+      border: 1px solid rgba(207, 219, 213, 0.6);
+      border-radius: 15px;
+      color: base.$black;
+      padding: 20px 25px;
+
+      &::-webkit-input-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: base.$black;
+      }
+
+      &::-moz-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: base.$black;
+      }
+
+      &:-ms-input-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: base.$black;
+      }
+
+      &:-moz-placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: base.$black;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      transform: translateY(-50%);
+
+      border: none;
+      background: none;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+    }
+  }
+}

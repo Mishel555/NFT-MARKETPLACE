@@ -1,0 +1,21 @@
+@use '@styles/base.scss';
+
+.requests {
+  &__filters {
+    margin: 10px 0;
+  }
+
+  &_block {
+    margin-top: 15px;
+    display: grid;
+    gap: 15px;
+  }
+
+  &__date {
+    font-size: 14px;
+    color: base.$grey-normal;
+  }
+
+  &_list {
+  }
+}

@@ -1,0 +1,73 @@
+@use '../../../../../../../styles/base';
+
+.root {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s ease-in-out;
+
+  &:before {
+    content: "";
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    position: absolute;
+    z-index: 3;
+    background: base.$white;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+  }
+
+  &:nth-child(1) {
+    background: linear-gradient(to left, rgba(143, 0, 255, 1), rgba(176, 163, 255, 1));
+  }
+
+  &:nth-child(2) {
+    background: linear-gradient(to left, rgba(12, 163, 108, 1), rgba(133, 215, 195, 1));
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(to left, rgba(0, 56, 255, 1), rgba(163, 200, 255, 1));
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &__disabled {
+    opacity: 0.4;
+  }
+
+  &_block {
+    position: relative;
+    z-index: 3;
+
+    &__title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 40px;
+      color: base.$black;
+    }
+
+    &__description {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: base.$grey-main;
+      margin-top: 5px;
+    }
+  }
+
+  &.selected {
+    opacity: 1;
+  }
+}

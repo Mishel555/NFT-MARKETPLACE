@@ -1,0 +1,55 @@
+@use '@styles/base';
+
+.root {
+  border-top: 1px solid base.$grey-extra-light;
+  padding: 24px 20px;
+
+  &__wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &_label {
+      font-size: 12px;
+    }
+
+    &_text {
+      margin-top: 5px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    gap: 10px;
+
+    &_btn {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 1px solid base.$grey-extra-light;
+      background-color: base.$white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .2s ease-in-out;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+
+      &:hover {
+        background-color: base.$violet;
+      }
+    }
+  }
+
+}

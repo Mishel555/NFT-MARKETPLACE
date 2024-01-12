@@ -1,0 +1,83 @@
+@use '@styles/base';
+
+.root {
+  padding-top: 15px;
+
+  &__block {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  &__title {
+    font-size: 12px;
+    color: base.$grey-normal;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: base.$grey;
+    width: 95px;
+    margin-right: 15px;
+  }
+
+  &__group {
+    width: 100%;
+    max-width: 567px;
+
+    textarea {
+      background-color: base.$coffee-back;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 17px;
+    color: base.$red;
+    margin-top: 5px;
+  }
+}
+
+.btn__root {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    border: none;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: base.$coffee-dark;
+    text-transform: uppercase;
+
+    background: none;
+    transition: all .2s ease-in-out;
+
+    &_decline {
+      color: base.$grey-normal;
+      margin-left: 25px;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      opacity: 0.7;
+      transform: scale(1.02);
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
+}

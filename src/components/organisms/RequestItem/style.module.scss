@@ -1,0 +1,115 @@
+@use '../../../styles/main';
+@use '../../../styles/base';
+
+.root {
+  margin-top: 10px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: base.$white;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+
+  &_item {
+    display: flex;
+    align-items: center;
+
+    &__user {
+      width: 100%;
+      max-width: 50px;
+    }
+
+    &__username {
+      font-size: 14px;
+      font-weight: 600;
+      color: base.$grey;
+      line-height: 18px;
+      margin-left: 10px;
+      max-width: 180px;
+      width: 100%;
+    }
+
+    &__text {
+      width: 100%;
+      max-width: 250px;
+      margin-left: 90px;
+
+      font-size: 14px;
+      line-height: 18px;
+      color: base.$grey;
+
+      text-transform: capitalize;
+
+      @media screen and (max-width: base.$breakpoint-xl) {
+        margin-left: 25px;
+      }
+    }
+
+    &__status {
+      width: 100%;
+      max-width: 180px;
+      margin-left: 190px;
+
+      @media screen and (max-width: base.$breakpoint-xl) {
+        margin-left: 25px;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      max-width: 60px;
+      margin-left: auto;
+      border: none;
+      color: base.$grey;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      background: none;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.02);
+      }
+
+      img {
+        width: 7px;
+        height: 7px;
+        margin-left: 8px;
+
+        transition: transform .2s ease-in-out;
+      }
+
+      &_active {
+        img {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+  }
+
+  &__fee {
+    margin: 10px 0;
+  }
+
+  &__reason {
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+
+    &__title, &__description {
+      font-size: 14px;
+      color: base.$grey;
+    }
+
+    &__title {
+      width: 100px;
+      font-weight: 600;
+    }
+
+    &__description {
+      width: 800px;
+    }
+  }
+}

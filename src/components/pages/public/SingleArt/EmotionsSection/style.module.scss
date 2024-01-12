@@ -1,0 +1,101 @@
+@use '@styles/base';
+
+.root {
+  max-width: 760px;
+  width: 100%;
+  margin-left: 40px;
+  @media (max-width: base.$breakpoint-md) {
+    margin-left: 0;
+  }
+
+  &__item {
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 35px;
+    @media (max-width: base.$breakpoint-md) {
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn {
+    font-size: 12px;
+    font-weight: 600;
+    color: base.$white;
+    border: none;
+    border-radius: 18px;
+    background: base.$violet;
+    padding: 9px 25px;
+    margin-right: 8px;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+
+    @media (max-width: base.$breakpoint-md) {
+      margin-bottom: 8px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: base.$black;
+    border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    @media (max-width: base.$breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: flex-start;
+    max-width: 760px;
+    width: 100%;
+  }
+
+  &__block {
+    max-width: 360px;
+    width: 100%;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__list {
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      color: base.$black;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+

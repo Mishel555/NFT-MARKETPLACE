@@ -1,0 +1,49 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: base.$white;
+
+  &__input {
+    width: 100%;
+    border: none;
+    color: base.$grey-normal;
+    font-size: 15px;
+    font-weight: 300;
+
+    &::-webkit-input-placeholder {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: base.$grey-normal;
+    }
+
+    &::-moz-placeholder {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: base.$grey-normal;
+    }
+
+    &:-ms-input-placeholder {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: base.$grey-normal;
+    }
+
+    &:-moz-placeholder {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: base.$grey-normal;
+    }
+  }
+}

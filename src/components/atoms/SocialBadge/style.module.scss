@@ -1,0 +1,56 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+  border-radius: 23px;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__badge {
+    display: block;
+    width: 21px;
+    height: 21px;
+    margin-left: auto;
+  }
+
+  &__copy {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+
+    border: none;
+    background: none;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$grey-main;
+    margin-left: 8px;
+    text-decoration: none;
+  }
+
+  &__followers {
+    font-size: 12px;
+    font-weight: 500;
+    color: base.$grey-main;
+    opacity: 0.3;
+    margin-left: auto;
+  }
+}

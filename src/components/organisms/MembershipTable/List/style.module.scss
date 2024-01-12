@@ -1,0 +1,22 @@
+@use '@styles/base.scss';
+
+.root {
+  padding-top: 30px;
+  list-style: none;
+
+  &__item {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid base.$grey-extra-light;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    max-width: 240px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}

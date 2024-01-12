@@ -1,0 +1,25 @@
+@use '@styles/base.scss';
+
+.root {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-color: base.$white;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: .3s ease-in-out;
+  background-color: base.$white;
+
+  &:hover {
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+}

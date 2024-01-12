@@ -1,0 +1,43 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 50px;
+
+  &__title {
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Druk", sans-serif;
+  }
+
+  &__subTitle {
+    margin-top: 30px;
+
+    text-align: center;
+    font-size: 16px;
+    color: base.$grey;
+  }
+
+  &__table {
+    margin-top: 90px;
+    padding: 55px 70px;
+
+    border-radius: 4px;
+    border: 1px solid base.$grey-extra-light;
+
+    @media (max-width: base.$breakpoint-xxl) {
+      padding: 55px 50px;
+    }
+
+    @media (max-width: base.$breakpoint-lg) {
+      padding: 55px 30px;
+    }
+
+    @media (max-width: base.$breakpoint-md) {
+      padding: 10px 0;
+      border: none;
+    }
+  }
+}

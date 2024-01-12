@@ -1,0 +1,74 @@
+@use '@styles/base';
+
+.root {
+  width: 200px;
+  position: relative;
+
+  @media (max-width: base.$breakpoint-md) {
+    width: 100%;
+  }
+
+  &_active {
+
+  }
+
+  &__toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    border: none;
+    background: none;
+
+    svg {
+      transition: .2s ease-in-out;
+    }
+
+    &_active {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__current {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border-radius: 5px;
+    border: 1px solid base.$grey-extra-light;
+    padding: 20px 10px;
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 1500;
+
+    background-color: base.$white;
+
+    &_item {
+      cursor: pointer;
+
+      text-align: left;
+      font-size: 16px;
+      font-weight: 700;
+      transition: .2s ease-in-out;
+
+      border: none;
+      background: none;
+
+      &:hover {
+        color: base.$grey-light;
+      }
+    }
+  }
+}

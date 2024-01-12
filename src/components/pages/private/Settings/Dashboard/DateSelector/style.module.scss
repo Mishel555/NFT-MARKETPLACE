@@ -1,0 +1,25 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  list-style: none;
+
+  &__item {
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$grey-main;
+    text-transform: capitalize;
+
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+
+    &_active, &:hover {
+      color: base.$black;
+    }
+  }
+}

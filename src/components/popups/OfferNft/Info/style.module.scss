@@ -1,0 +1,40 @@
+@use '@styles/base.scss';
+
+.root {
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 150px;
+
+  &__item {
+
+    &_name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &_text {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    &_img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__usd {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: base.$grey;
+  }
+}

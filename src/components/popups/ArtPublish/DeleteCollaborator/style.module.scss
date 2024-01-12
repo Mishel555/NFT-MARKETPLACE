@@ -1,0 +1,89 @@
+@use '@styles/base';
+
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: base.$popup-dark-background;
+
+  &__content {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    padding: 32px;
+    border-radius: 16px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1500;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    background-color: base.$white;
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      max-width: 300px;
+      padding: 24px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__label {
+    margin-top: 24px;
+    font-size: 12px;
+  }
+
+  &__wrapper {
+    margin-top: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      flex-direction: column;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    border: none;
+    background: none;
+  }
+
+  &__button {
+    width: 165px;
+    height: 46px;
+
+    border-radius: 2px;
+    border: 1px solid base.$violet;
+
+    font-weight: 700;
+    color: base.$white;
+    background-color: base.$violet;
+    transition: .3s ease-in-out;
+
+    &_cancel {
+      color: base.$violet;
+      border-color: base.$violet-light;
+      background-color: base.$violet-light;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      width: 100%;
+    }
+  }
+}

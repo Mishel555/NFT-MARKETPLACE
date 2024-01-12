@@ -1,0 +1,72 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &_loading {
+    min-height: base.$body;
+  }
+
+  &__wrapper {
+    &__sort {
+      @media screen and (max-width: base.$breakpoint-lg) {
+        display: none;
+      }
+    }
+
+    &__main {
+      margin-top: 65px;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, minmax(250px, 350px));
+      gap: 25px;
+      @media screen and (max-width: base.$breakpoint-lg-big) {
+        grid-template-columns: repeat(2, minmax(300px, 350px));
+      }
+
+      @media screen and (max-width: base.$breakpoint-lg) {
+        margin-top: 25px;
+      }
+
+      @media screen and (max-width: base.$breakpoint-md) {
+        grid-template-columns: repeat(1, minmax(300px, 350px));
+      }
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    width: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 45%;
+    text-align: center;
+    transform: translateY(-45%);
+
+    svg {
+      transform: scale(2);
+    }
+  }
+
+  &__moreLoader {
+    padding-top: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .7;
+    text-align: center;
+    background-color: base.$white;
+  }
+
+  &__message {
+    text-transform: uppercase;
+    font-size: 22px;
+    color: base.$grey-light;
+    font-weight: 500;
+  }
+}

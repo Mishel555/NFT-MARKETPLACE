@@ -1,0 +1,77 @@
+@use '@styles/base';
+
+.root {
+  &__title {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: base.$grey-main;
+  }
+
+  &__list {
+    margin-top: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    @media (max-width: base.$breakpoint-md) {
+      flex-direction: column;
+    }
+
+    &_text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      color: base.$black;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: none;
+      background: none;
+      max-width: 100px;
+      width: 100%;
+      border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+
+      @media (max-width: base.$breakpoint-md) {
+        max-width: unset;
+      }
+    }
+
+    &_item {
+      position: relative;
+      margin-right: 20px;
+      cursor: url("../../../../assets/icons/delete-red-icon.svg"), pointer;
+
+      @media (max-width: base.$breakpoint-md) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &_btn {
+      border: 1px solid rgba(207, 219, 213, 0.6);
+      border-radius: 23px;
+      padding: 13px 18px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      color: base.$black;
+
+      img {
+        margin-left: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+@use "@styles/base.scss";
+
+.root {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  //border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    @media (max-width: base.$breakpoint-md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__metamask {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 18px;
+    border: 1px solid rgba(207, 219, 213, 0.6);
+    border-radius: 50%;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__btn {
+    font-size: 12px;
+    font-weight: 700;
+    color: base.$white;
+    padding: 9px 18px;
+    background: base.$black;
+    border: none;
+    flex-shrink: 0;
+    border-radius: 18px;
+    margin-left: auto;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__disconnect {
+    max-width: 165px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$black;
+    padding: 14px 18px;
+    background: none;
+    border: 1px solid rgba(122, 82, 244, 0.3);
+    border-radius: 2px;
+    transition: 0.4s ease-in-out;
+
+    @media (max-width: base.$breakpoint-md) {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      background-color: rgba(122, 82, 244, 0.3);
+    }
+  }
+
+  &__connect {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$black;
+    background: none;
+    border: none;
+    flex-shrink: 0;
+    margin-left: auto;
+    transition: 0.4s ease-in-out;
+
+    @media (max-width: base.$breakpoint-md) {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+    }
+  }
+
+  &__switch {
+    margin-left: auto;
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$black;
+    background: none;
+    border: none;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+    }
+  }
+
+  &__info {
+    margin-right: 15px;
+
+    &__subtitle {
+      font-size: 12px;
+      font-weight: 500;
+      color: base.$grey-main;
+    }
+
+    &__text {
+      font-size: 14px;
+      font-weight: 700;
+      color: base.$black;
+      margin-top: 4px;
+    }
+  }
+}
+

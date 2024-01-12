@@ -1,0 +1,9 @@
+@use '@styles/base.scss';
+
+.root {
+  display: none;
+
+  @media (max-width: base.$breakpoint-md) {
+    display: block;
+  }
+}

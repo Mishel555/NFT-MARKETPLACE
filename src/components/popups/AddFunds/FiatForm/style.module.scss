@@ -1,0 +1,31 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 40px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  &__submit {
+    width: 225px;
+    height: 60px;
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: base.$white;
+
+    border: 2px solid base.$black;
+    background-color: base.$black;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      color: base.$black;
+      background-color: base.$white;
+    }
+  }
+}

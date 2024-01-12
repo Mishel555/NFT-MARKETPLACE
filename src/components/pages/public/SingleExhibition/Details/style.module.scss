@@ -1,0 +1,28 @@
+@use '@styles/base';
+
+.root {
+  border-top: 1px solid base.$grey-extra-light;
+  margin-top: 20px;
+  padding: 24px 20px;
+
+  &__label {
+    font-size: 12px;
+  }
+
+  &__text {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  &__group {
+    margin-top: 20px;
+  }
+
+  &__wrapper {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    list-style: none;
+  }
+}

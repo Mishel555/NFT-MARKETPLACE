@@ -1,0 +1,84 @@
+@use '@styles/base';
+
+.root {
+  padding: 25px 20px;
+  border-radius: 10px;
+  border: 1px solid base.$grey-extra-light;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: base.$breakpoint-md) {
+    padding: 25px 16px;
+  }
+
+  &__label {
+    width: 100px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @media (max-width: base.$breakpoint-sm-big) {
+      max-width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: base.$breakpoint-sm) {
+      max-width: 45px;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__roleBadge {
+    width: 90px;
+    height: 36px;
+
+    @media (max-width: base.$breakpoint-md) {
+      width: 60px;
+      height: 22px;
+
+      padding: 4px 8px;
+
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  &__action {
+    display: inline-block;
+
+    padding: 10px 28px;
+    border-radius: 18px;
+    border: 1px solid rgba(base.$grey-extra, .6);
+
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: base.$black;
+
+    transition: .3s ease-in-out;
+    background-color: base.$white;
+
+    @media (max-width: base.$breakpoint-md) {
+      display: none;
+    }
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+  }
+}

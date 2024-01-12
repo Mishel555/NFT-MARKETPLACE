@@ -1,0 +1,12 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 55px;
+
+  @media (max-width: base.$breakpoint-md) {
+    margin-top: 20px;
+  }
+}

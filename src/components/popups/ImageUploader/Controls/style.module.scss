@@ -1,0 +1,65 @@
+@use '@styles/base';
+
+.root {
+  &__wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    border-top: 1px solid base.$grey-light-extra;
+
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: base.$white;
+  }
+
+  &__btn {
+    width: 85px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid base.$violet;
+    border-radius: 7px;
+    transition: .2s ease-in-out;
+    text-transform: uppercase;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &_upload {
+      color: base.$white;
+      background-color: base.$violet;
+
+      &:hover {
+        color: base.$violet;
+        background-color: base.$white;
+      }
+    }
+
+    &_close {
+      color: base.$violet;
+      background-color: base.$white;
+
+      &:hover {
+        background-color: base.$violet-light;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    border: none;
+    background: none;
+  }
+}

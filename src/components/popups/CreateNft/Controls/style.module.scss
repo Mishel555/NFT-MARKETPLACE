@@ -1,0 +1,51 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 35px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+
+  background-color: base.$white;
+
+  @media (max-width: base.$breakpoint-md) {
+    padding: 10px 24px;
+  }
+
+  &__btn {
+    width: 165px;
+    height: 46px;
+    border-radius: 2px;
+    border: 1px solid base.$violet;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: base.$white;
+    background-color: base.$violet;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      background-color: base.$black;
+      border-color: base.$black;
+      color: base.$white;
+    }
+
+    &:disabled {
+      opacity: .8;
+      cursor: not-allowed;
+    }
+  }
+
+  &__backBtn {
+    color: base.$violet;
+    border: 1px solid base.$violet-light;
+    background-color: base.$violet-light;
+  }
+}

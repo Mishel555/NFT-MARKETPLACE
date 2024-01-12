@@ -1,0 +1,120 @@
+@use '@styles/base';
+
+.root {
+  display: inline-block;
+  width: 100%;
+  max-width: 220px;
+
+  &__header {
+    width: 100%;
+    max-width: 220px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: base.$purple;
+    margin: 0 auto;
+    background-color: rgba(140, 80, 216, 0.15);
+    transition: opacity .2s ease-in-out;
+
+    img {
+      width: 7px;
+      transform: rotateZ(-90deg);
+      transition: transform .2s ease-in-out;
+    }
+
+    &_active {
+      img {
+        transform: rotateZ(0deg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: max-content max-content;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: left;
+
+    &_absolute {
+      width: calc(100% + 2px);
+
+      position: absolute;
+      z-index: 5;
+      left: 0;
+      right: 0;
+      transform: translateX(-1px);
+
+      border: 1px solid base.$grey-normal-extra;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top: none;
+
+      padding: 15px 30px 20px;
+
+      background-color: base.$white;
+    }
+
+    &_main {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      max-width: 220px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &_title {
+      font-size: 12px;
+      font-weight: 600;
+      color: base.$grey-light;
+    }
+
+    ul {
+      padding: 0;
+      margin: 5px 0 0;
+
+      list-style: none;
+    }
+  }
+
+  &__fee {
+    font-size: 13px;
+    color: base.$grey-brown;
+    margin: 10px 0;
+  }
+
+  &__amount {
+    font-size: 13px;
+    color: base.$grey-brown;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  &__percentage {
+    .root__amount {
+      font-weight: 600;
+    }
+  }
+
+  &__infinity {
+    padding-top: 5px;
+    font-size: 18px;
+    line-height: 15px;
+  }
+}

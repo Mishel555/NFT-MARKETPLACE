@@ -1,0 +1,82 @@
+@use '@styles/base';
+
+.root {
+  max-width: 212px;
+  width: 100%;
+  height: 128px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+
+  &:hover {
+    .root__title {
+      color: base.$coffee-dark;
+    }
+
+    &:before {
+      background: linear-gradient(to bottom, base.$coffee-dark, base.$coffee-normal);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: base.$coffee-back;
+    border-radius: 10px;
+  }
+
+  &_active {
+    .root__title {
+      color: base.$coffee-dark;
+    }
+
+    &:before {
+      background: linear-gradient(to bottom, base.$coffee-dark, base.$coffee-normal);
+    }
+  }
+
+  &_inactive {
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__inner {
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    background-color: base.$coffee-back;
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: base.$grey;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: base.$grey;
+    margin-top: 25px;
+  }
+}

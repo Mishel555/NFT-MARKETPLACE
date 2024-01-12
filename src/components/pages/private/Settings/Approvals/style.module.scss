@@ -1,0 +1,13 @@
+@use '@styles/base.scss';
+
+.root {
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    font-size: 14px;
+    color: base.$grey-normal;
+  }
+}

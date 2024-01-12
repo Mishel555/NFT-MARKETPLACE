@@ -1,0 +1,103 @@
+@use '@styles/base.scss';
+@import '@styles/main.scss';
+
+.root {
+  padding: 15px 20px;
+
+  &__title {
+    font-size: 22px;
+    font-weight: 800;
+    color: base.$black;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__status {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: base.$grey-main;
+  }
+
+  &__bottom {
+    height: 40px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+
+    &__text {
+      font-size: 14px;
+      font-weight: 500;
+      color: base.$grey-main;
+    }
+
+    &__number {
+      font-size: 18px;
+      color: base.$black;
+    }
+
+    &_icon {
+      &_usd {
+        width: 20px;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+
+      &_eth {
+        width: 25px;
+        height: 25px;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+
+    &_amount {
+      font-size: 16px;
+      font-weight: 600;
+      color: base.$grey;
+    }
+  }
+
+  &__collect {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 115px;
+    height: 38px;
+    border: 1.5px solid base.$black;
+    color: base.$black;
+    background: none;
+    border-radius: 30px;
+    margin-left: 5px;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      color: base.$white;
+      background-color: base.$black;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 13px;
+    text-transform: uppercase;
+    color: base.$purple-violet-light;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+

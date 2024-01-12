@@ -1,0 +1,17 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  max-width: 1560px;
+  height: 100%;
+  max-height: 600px;
+  //object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  background-color: base.$black;
+
+  @media all and (display-mode: fullscreen) {
+    max-height: unset;
+    object-fit: contain;
+  }
+}

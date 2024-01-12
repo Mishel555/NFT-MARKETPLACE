@@ -1,0 +1,11 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  overflow: hidden;
+  background: base.$grey;
+
+  .editor_wrapper {
+    min-height: calc(100vh - 190px);
+  }
+}

@@ -1,0 +1,9 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 370px));
+  gap: 10px;
+}

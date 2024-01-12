@@ -1,0 +1,12 @@
+@use '@styles/base.scss';
+
+.root {
+  width: 100%;
+  max-width: 1680px;
+  margin: auto;
+  padding: 20px 60px 60px;
+
+  @media (max-width: base.$breakpoint-md) {
+    padding: 0 15px 35px;
+  }
+}

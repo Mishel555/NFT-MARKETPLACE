@@ -1,0 +1,38 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 25px;
+  margin-bottom: 35px;
+
+  @media (max-width: base.$breakpoint-md) {
+    margin-top: 15px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 30px;
+
+    @media (max-width: base.$breakpoint-md) {
+      flex-direction: column-reverse;
+      margin-bottom: 0;
+      gap: 0;
+    }
+
+    &_wrapper {
+      width: 100%;
+      max-width: 760px;
+
+      @media (max-width: base.$breakpoint-lg-big) {
+        width: 50%;
+      }
+
+      @media (max-width: base.$breakpoint-md) {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use '@styles/base';
+
+.root {
+  padding: 0 24px;
+
+  @media (max-width: base.$breakpoint-md) {
+    padding: 0 10px;
+  }
+
+  &__top {
+    padding: 20px 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    border-bottom: 1px solid base.$grey-extra-light;
+
+    @media (max-width: base.$breakpoint-md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  }
+
+  &__bottom {
+    padding: 20px 5px;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (max-width: base.$breakpoint-md) {
+      gap: 15px;
+      padding-top: 20px;
+      border-top: 1px solid base.$grey-extra-light;
+    }
+  }
+}

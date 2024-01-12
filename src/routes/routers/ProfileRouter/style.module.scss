@@ -1,0 +1,28 @@
+@use '@styles/base';
+
+.root {
+  max-width: 1160px;
+  width: 100%;
+  margin-left: 90px;
+  margin-top: 50px;
+
+  display: block;
+
+  @media screen and (max-width: base.$breakpoint-lg) {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: base.$breakpoint-md) {
+    margin-top: 0;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: base.$breakpoint-md) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use '@styles/base';
+
+.root {
+  border-top: 2px dashed base.$grey-extra-light;
+  padding: 20px 5px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  &__pickers {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    color: base.$white;
+    background-color: base.$black;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      background-color: base.$violet;
+    }
+  }
+}

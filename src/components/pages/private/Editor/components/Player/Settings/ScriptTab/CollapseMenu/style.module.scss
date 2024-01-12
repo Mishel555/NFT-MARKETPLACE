@@ -1,0 +1,51 @@
+@use '../../../../../../../../../styles/base';
+
+.collapse_menu {
+  padding: 10px;
+  border-bottom: 2px solid base.$grey-dark;
+}
+
+.collapse_menu__controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapse_menu__title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.collapse_menu__data {
+  padding: 30px 10px 10px 10px;
+  font-size: 14px;
+  font-weight: 400;
+
+  ol {
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px;
+  }
+}
+
+.hide_button {
+  background: none;
+  border: none;
+  transition: transform .2s ease-in-out;
+}
+
+.opened_hide_button {
+  transform: rotateZ(90deg);
+}

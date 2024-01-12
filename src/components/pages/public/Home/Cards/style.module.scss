@@ -1,0 +1,99 @@
+@use '@styles/base.scss';
+
+.root {
+  margin-top: 120px;
+  overflow-x: auto;
+
+  @media (max-width: base.$breakpoint-md-big) {
+    padding-bottom: 20px;
+  }
+
+  &__wrapper {
+    min-width: fit-content;
+
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: minmax(202px, 1fr) minmax(400px, 2fr) minmax(202px, 1fr);
+    gap: 30px;
+
+    @media (max-width: base.$breakpoint-lg) {
+      gap: 15px;
+      grid-template-columns: minmax(235px, 1fr) minmax(208px, 2fr) minmax(235px, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 14px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      background: linear-gradient(1turn,#000,transparent);
+    }
+
+    &:hover {
+      .root__image {
+        transform: scale(1.2);
+      }
+    }
+
+    &_disabled {
+      opacity: .8;
+
+      .root__action {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &__action {
+    width: fit-content;
+    max-width: 225px;
+    margin: auto;
+    padding: 10px 15px;
+
+    border-radius: 24px;
+    border: 1.5px solid base.$white;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 45px;
+    z-index: 1000;
+
+    color: base.$white;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+
+    @media (max-width: base.$breakpoint-lg) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: base.$black;
+      background-color: base.$white;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+
+    transition: .3s ease-in-out;
+  }
+}

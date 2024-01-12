@@ -1,0 +1,125 @@
+@use "@styles/base.scss";
+
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 1680px;
+  padding: 30px 35px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: base.$breakpoint-md) {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &_btn {
+      width: 100px;
+      border: none;
+      background: base.$white;
+
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &_join {
+      width: 110px;
+      height: 40px;
+      border-radius: 30px;
+      border: 1.5px solid base.$black;
+
+      color: base.$white;
+      background-color: base.$black;
+
+      &:hover {
+        color: base.$black;
+        background-color: base.$white;
+      }
+    }
+  }
+
+  &__mainLink {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    &_item {
+      position: relative;
+      width: fit-content;
+
+      font-size: 16px;
+      color: base.$black;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      text-decoration-line: none;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: base.$grey-light;
+      }
+
+      @media (max-width: base.$breakpoint-xl) {
+        font-size: 14px;
+      }
+
+      &::before {
+        content: '';
+        width: 0;
+        height: 1.5px;
+
+        position: absolute;
+        bottom: -5px;
+
+        transition: .4s;
+        background-color: base.$black;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    &_active {
+      pointer-events: none;
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: base.$breakpoint-xl) {
+      gap: 10px;
+    }
+  }
+}

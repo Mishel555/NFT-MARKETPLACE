@@ -1,0 +1,6 @@
+@use '@styles/base';
+
+.root {
+  border-radius: 16px;
+  border: 1px solid base.$grey-extra-light;
+}

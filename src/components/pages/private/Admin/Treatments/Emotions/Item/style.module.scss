@@ -1,0 +1,92 @@
+@use "@styles/base";
+
+.treatment {
+  &_box {
+    &_item {
+      width: 100%;
+      max-width: 1500px;
+      border-bottom: 1px solid base.$grey-light;
+      padding: 10px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: base.$breakpoint-3xl) {
+        max-width: 1000px;
+      }
+
+      @media screen and (max-width: base.$breakpoint-fhd) {
+        max-width: 550px;
+      }
+
+      &:hover {
+        background-color: base.$grey-light-normal;
+      }
+
+      &_root {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      &_title {
+        width: 100%;
+
+        color: base.$grey;
+        font-size: 15px;
+
+        border: none;
+        background: none;
+      }
+
+      &_button_group {
+        display: flex;
+        gap: 10px;
+
+        button {
+          background: none;
+          border: none;
+
+          transition: transform .2s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .confirm_box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        button {
+          background: none;
+          border: none;
+
+          min-width: 100px;
+          transition: color .2s ease-in-out;
+
+          &:hover {
+            color: base.$grey-light;
+          }
+        }
+      }
+    }
+
+    &_form {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .error_message {
+        font-size: 14px;
+        color: base.$red;
+      }
+    }
+  }
+}

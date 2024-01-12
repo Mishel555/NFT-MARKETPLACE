@@ -1,0 +1,76 @@
+@use '../../../../../../../../../styles/base';
+
+.root {
+  flex: 1;
+  position: relative;
+  z-index: 1500;
+}
+
+
+.controller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  cursor: pointer;
+
+  text-transform: capitalize;
+  background-color: base.$grey-dark;
+
+  &__button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &__button_active {
+    transition: transform .2s ease-in-out;
+    transform: rotateZ(90deg);
+  }
+}
+
+.menu {
+  width: 100%;
+  max-height: 470px;
+  padding: 10px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 40px;
+
+  background-color: base.$grey-dark;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    cursor: pointer;
+    color: base.$grey-light;
+    text-transform: capitalize;
+
+    margin: 10px;
+
+    &:hover {
+      color: base.$white;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: base.$grey-ultra;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: base.$grey-ultra;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 2px solid base.$grey-ultra;
+    background-color: base.$grey-normal-dark;
+  }
+}

@@ -1,0 +1,37 @@
+@use '@styles/base.scss';
+
+.root {
+  position: absolute;
+  inset: 0;
+  background-color: base.$popup-dark-background;
+
+  &__wrapper {
+    max-width: 780px;
+    max-height: 690px;
+
+    position: absolute;
+    inset: 0;
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 8px;
+    background-color: base.$white;
+  }
+
+  &__content {
+    width: 100%;
+    overflow-y: auto;
+
+    &_height {
+      height: 100%;
+    }
+
+    &_hidden {
+      overflow-y: unset;
+    }
+  }
+}

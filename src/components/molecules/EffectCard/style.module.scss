@@ -1,0 +1,67 @@
+@use '@styles/base';
+
+.root {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  background: base.$white;
+  border: 1px solid base.$grey-extra-light;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  height: 365px;
+
+  @media (max-width: base.$breakpoint-md) {
+    max-width: 165px;
+    width: 100%;
+    height: 165px;
+  }
+
+  &__icon {
+    width: 130px;
+    height: 130px;
+
+    @media (max-width: base.$breakpoint-md) {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    color: base.$black;
+    margin-top: 45px;
+    @media (max-width: base.$breakpoint-md) {
+      margin-top: 20px;
+    }
+  }
+
+  &__preview {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    @media (max-width: base.$breakpoint-md) {
+      font-size: 10px;
+      bottom: 10px;
+      right: 10px;
+      border-bottom: 10px;
+    }
+  }
+}

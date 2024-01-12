@@ -1,0 +1,17 @@
+@use '@styles/base';
+
+.root {
+  height: 36px;
+  border: 1px solid rgba(207, 219, 213, .6);
+  border-radius: 18px;
+  padding: 10px 18px;
+
+  font-size: 12px;
+  font-weight: 700;
+  background-color: base.$white;
+
+  &_active {
+    color: base.$violet;
+    background-color: rgba(122, 82, 244, .6);
+  }
+}

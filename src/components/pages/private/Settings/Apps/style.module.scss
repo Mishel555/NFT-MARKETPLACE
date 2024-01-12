@@ -1,0 +1,21 @@
+@use "@styles/base.scss";
+
+.root {
+
+  &__container {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+    padding: 22px 26px 10px;
+    background: rgba(235, 240, 240, 0.5);
+  }
+
+  &__title {
+    margin-top: 38px;
+    margin-bottom: 24px;
+
+    font-size: 18px;
+    font-weight: 800;
+    color: base.$black;
+  }
+}

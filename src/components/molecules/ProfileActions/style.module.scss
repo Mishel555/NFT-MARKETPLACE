@@ -1,0 +1,61 @@
+@use '@styles/base';
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__item {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #CFDBD5;
+    border-radius: 50%;
+    background-color: base.$white;
+    @media screen and (max-width: base.$breakpoint-md) {
+      margin-right: 25px;
+    }
+
+    &_btn {
+      width: 50px;
+      height: 50px;
+      border: none;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__menu {
+    width: 130px;
+    border: 1px solid base.$grey-main;
+    border-radius: 15px;
+    margin-bottom: 0;
+    padding: 5px 10px;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    z-index: 1000;
+    list-style: none;
+    background-color: base.$white;
+
+    &_item {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 12px;
+      text-align: center;
+      text-transform: capitalize;
+      color: base.$grey-main;
+      border-bottom: 1px solid base.$grey-main;
+      text-decoration-line: none;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

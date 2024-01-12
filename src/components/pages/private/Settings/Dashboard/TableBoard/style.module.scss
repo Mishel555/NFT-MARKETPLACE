@@ -1,0 +1,13 @@
+@use '@styles/base';
+
+.root {
+  margin-top: 30px;
+  border-radius: 16px;
+  border: 1px solid base.$grey-extra-light;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

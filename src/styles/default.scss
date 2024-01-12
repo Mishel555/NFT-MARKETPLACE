@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Druk';
+  src: url('../assets/fonts/Druk.otf') format('truetype');
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+*:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+/* Chrome <=56, Safari < 10 */
+*:focus:-moz-placeholder {
+  opacity: 0;
+}
+
+/* FF 4-18 */
+*:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+/* FF 19-50 */
+*:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+/* IE 10+ */
+*:focus::placeholder {
+  opacity: 0;
+}
+
+/* Modern Browsers */
+
+body, * {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+input, textarea, button {
+  outline: 0;
+  box-shadow: none;
+}
+
+button {
+  cursor: pointer;
+}

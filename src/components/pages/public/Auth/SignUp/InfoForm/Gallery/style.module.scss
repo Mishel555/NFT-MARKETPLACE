@@ -1,0 +1,52 @@
+@use '@styles/base';
+
+.root {
+  width: 100%;
+  margin: auto;
+
+  &__info {
+    font-size: 13px;
+    font-weight: 500;
+    color: base.$grey-main;
+    margin-bottom: 25px;
+    margin-top: 15px;
+  }
+
+  hr {
+    height: 1px;
+    background-color: #CDCDCD;
+    border: none;
+    margin-bottom: 15px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    font-size: 16px;
+    font-weight: 700;
+    color: base.$black;
+    width: 100%;
+    border: 2px solid base.$grey-darker;
+    border-radius: 2px;
+    background: none;
+    padding: 12px;
+    margin-top: 25px;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:last-child {
+      margin-left: 15px;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}
